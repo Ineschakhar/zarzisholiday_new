@@ -1,0 +1,21 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}New Comment{% endblock %}
+
+{% block body %}
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
+	<div
+		class="page-wrapper">
+		<!-- start page container -->
+		<div class="page-content-wrapper">
+			<div class="page-content">
+
+
+    <h1>Create new Comment</h1>
+
+    {{ include('admin/comment/_form.html.twig') }}
+
+<a href="{{ path('admin_comment_index') }}">back to list</a></div></div></div></body>
+
+
+{% endblock %}

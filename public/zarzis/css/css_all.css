@@ -1,0 +1,952 @@
+    .nd_options_pg_home_5 .nd_options_section.nd_options_height_20 {
+        height: 15px !important;
+    }
+    
+    .nd_options_pg_home_5 a {
+        border-radius: 0px;
+        font-size: 11px;
+        font-weight: bold;
+        letter-spacing: 2px;
+        padding: 8px 20px;
+        font-family: 'Roboto' !important;
+    }
+    
+    .nd_options_pg_home_5 h3 strong {
+        font-weight: normal !important;
+    }
+    
+    .nd_options_home_5_service strong {
+        font-weight: normal !important;
+    }
+    
+    .nd_options_home_5_form h6 {
+        border-radius: 0px;
+        padding: 5px 10px;
+        font-size: 11px;
+    }
+    
+    .nd_options_home_5_form h1 strong {
+        font-weight: normal;
+    }
+    
+    .nd_options_home_5_countdown .nd_options_border_radius_3 {
+        border-radius: 0px !important;
+        font-size: 11px;
+        padding: 5px 10px;
+        font-family: 'Roboto';
+    }
+    /*SEARCH COMPONENTS*/
+    
+    .nd_booking_home_5_search_component #nd_booking_date_number_from_front,
+    .nd_booking_home_5_search_component #nd_booking_date_number_to_front,
+    .nd_booking_home_5_search_component .nd_booking_guests_number {
+        font-weight: normal;
+    }
+    
+    .nd_booking_home_5_search_component input[type='submit'] {
+        background-image: url(http://www.nicdarkthemes.com/themes/hotel/wp/demo/chalet-wordpress-theme/wp-content/uploads/sites/7/2017/09/parallax8.jpg);
+        background-size: 1700px;
+        background-position: right;
+    }
+    
+    img.wp-smiley,
+    img.emoji {
+        display: inline !important;
+        border: none !important;
+        box-shadow: none !important;
+        /* height: 1em !important;
+    width: 1em !important;*/
+        margin: 0 .07em !important;
+        vertical-align: -0.1em !important;
+        background: none !important;
+        padding: 0 !important;
+    }
+    
+    #divBottomRight img {
+        width: 17px;
+    }
+    /*color_dark_1*/
+    
+    .nd_booking_bg_greydark,
+    #nd_booking_slider_range .ui-slider-range,
+    #nd_booking_slider_range .ui-slider-handle,
+    .ui-tooltip.nd_booking_tooltip_jquery_content,
+    .ui-datepicker,
+    .ui-datepicker .ui-datepicker-prev span,
+    .ui-datepicker .ui-datepicker-next span {
+        background-color: #c8b28b;
+    }
+    
+    #nd_booking_search_filter_options li p {
+        border-bottom: 2px solid #c8b28b;
+    }
+    
+    #nd_booking_checkout_payment_tab_list li.ui-state-active {
+        border-bottom: 1px solid #c8b28b;
+    }
+    
+    .nd_booking_border_1_solid_greydark_important {
+        border: 1px solid #c8b28b !important;
+    }
+    /*color_dark_2*/
+    
+    .nd_booking_bg_greydark_2,
+    .ui-datepicker .ui-datepicker-header {
+        background-color: #c8b28b;
+    }
+    
+    .nd_booking_bg_greydark_2_important {
+        background-color: #c8b28b !important;
+    }
+    /*color_1*/
+    
+    .nd_booking_bg_yellow,
+    .nd_booking_btn_pagination_active,
+    .ui-datepicker-today a {
+        background-color: #c8b28b;
+    }
+    
+    .nd_booking_color_yellow_important {
+        color: #c8b28b !important;
+    }
+    /*color_2*/
+    
+    .nd_booking_bg_red {
+        background-color: #c8b28b;
+    }
+    /*sidebar*/
+    
+    .nd_booking_sidebar .widget {
+        margin-bottom: 40px;
+    }
+    
+    .nd_booking_sidebar .widget img,
+    .nd_booking_sidebar .widget select {
+        max-width: 100%;
+    }
+    
+    .nd_booking_sidebar .widget h3 {
+        margin-bottom: 20px;
+        font-weight: bolder;
+    }
+    /*search*/
+    
+    .nd_booking_sidebar .widget.widget_search input[type="text"] {
+        width: 100%;
+        font-weight: lighter;
+    }
+    
+    .nd_booking_sidebar .widget.widget_search input[type="submit"] {
+        margin-top: 20px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        font-weight: bold;
+        font-size: 11px;
+        font-family: 'Roboto', sans-serif;
+    }
+    /*list*/
+    
+    .nd_booking_sidebar .widget ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .nd_booking_sidebar .widget>ul>li {
+        padding: 10px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .nd_booking_sidebar .widget>ul>li:last-child {
+        padding-bottom: 0px;
+        border-bottom: 0px solid #f1f1f1;
+    }
+    
+    .nd_booking_sidebar .widget ul li {
+        padding: 10px;
+    }
+    
+    .nd_booking_sidebar .widget ul.children {
+        padding: 10px;
+    }
+    
+    .nd_booking_sidebar .widget ul.children:last-child {
+        padding-bottom: 0px;
+    }
+    /*calendar*/
+    
+    .nd_booking_sidebar .widget.widget_calendar table {
+        text-align: center;
+        background-color: #1c1c1c;
+        width: 100%;
+        border: 0px solid #f1f1f1;
+        line-height: 20px;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table th {
+        padding: 10px 5px;
+        font-size: 12px;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table td {
+        padding: 10px 5px;
+        color: #fff;
+        font-size: 12px;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table tbody td a {
+        color: #fff;
+        padding: 5px;
+        border-radius: 0px;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table tfoot td a {
+        color: #fff;
+        background-color: #6b6978;
+        padding: 5px;
+        border-radius: 0px;
+        font-size: 12px;
+        text-transform: uppercase;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table tfoot td {
+        padding-bottom: 20px;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table tfoot td#prev {
+        text-align: right;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table tfoot td#next {
+        text-align: left;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table caption {
+        font-size: 20px;
+        font-weight: bolder;
+        background-color: #151515;
+        padding: 20px;
+        border: 0px solid #f1f1f1;
+        border-bottom: 0px;
+    }
+    /*color calendar*/
+    
+    .nd_booking_sidebar .widget.widget_calendar table thead {
+        color: #878787;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table tbody td a {
+        background-color: #6b6978;
+    }
+    
+    .nd_booking_sidebar .widget.widget_calendar table caption {
+        color: #fff;
+        font-family: 'Roboto', sans-serif;
+    }
+    /*menu*/
+    
+    .nd_booking_sidebar .widget div ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .nd_booking_sidebar .widget div>ul>li {
+        padding: 10px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .nd_booking_sidebar .widget div>ul>li:last-child {
+        padding-bottom: 0px;
+        border-bottom: 0px solid #f1f1f1;
+    }
+    
+    .nd_booking_sidebar .widget div ul li {
+        padding: 10px;
+    }
+    
+    .nd_booking_sidebar .widget div ul.sub-menu {
+        padding: 10px;
+    }
+    
+    .nd_booking_sidebar .widget div ul.sub-menu:last-child {
+        padding-bottom: 0px;
+    }
+    /*tag*/
+    
+    .nd_booking_sidebar .widget.widget_tag_cloud a {
+        padding: 8px;
+        border: 1px solid #f1f1f1;
+        border-radius: 0px;
+        display: inline-block;
+        margin: 5px;
+        margin-left: 0px;
+        font-size: 12px !important;
+        line-height: 12px;
+    }
+    /*START FONTS FAMILY*/
+    
+    .nd_options_customizer_fonts .nd_options_first_font,
+    .nd_options_customizer_fonts h1,
+    .nd_options_customizer_fonts h2,
+    .nd_options_customizer_fonts h3,
+    .nd_options_customizer_fonts h4,
+    .nd_options_customizer_fonts h5,
+    .nd_options_customizer_fonts h6 {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .nd_options_customizer_fonts,
+    .nd_options_customizer_fonts .nd_options_second_font,
+    .nd_options_customizer_fonts p,
+    .nd_options_customizer_fonts a,
+    .nd_options_customizer_fonts select,
+    .nd_options_customizer_fonts textarea,
+    .nd_options_customizer_fonts label,
+    .nd_options_customizer_fonts input,
+    #start_nicdark_framework {
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .nd_options_customizer_fonts .nd_options_second_font_important {
+        font-family: 'Roboto', sans-serif !important;
+    }
+    
+    .nd_options_customizer_fonts .nd_options_third_font {
+        font-family: 'Gilda Display', sans-serif;
+    }
+    /*START FONTS COLOR*/
+    
+    .nd_options_customizer_fonts .nd_options_color_greydark,
+    .nd_options_customizer_fonts h1,
+    .nd_options_customizer_fonts h2,
+    .nd_options_customizer_fonts h3,
+    .nd_options_customizer_fonts h4,
+    .nd_options_customizer_fonts h5,
+    .nd_options_customizer_fonts h6 {
+        color: #444444;
+    }
+    
+    .nd_options_customizer_fonts .nd_options_color_greydark_important {
+        color: #444444 !important;
+    }
+    /*PLACEHOLDER*/
+    
+    .nd_options_customizer_fonts .nd_options_placeholder_color_greydark_important::-webkit-input-placeholder {
+        color: #444444 !important;
+    }
+    
+    .nd_options_customizer_fonts .nd_options_placeholder_color_greydark_important::-moz-placeholder {
+        color: #444444 !important;
+    }
+    
+    .nd_options_customizer_fonts .nd_options_placeholder_color_greydark_important:-ms-input-placeholder {
+        color: #444444 !important;
+    }
+    
+    .nd_options_customizer_fonts .nd_options_placeholder_color_greydark_important:-moz-placeholder {
+        color: #444444 !important;
+    }
+    
+    .nd_options_customizer_fonts,
+    .nd_options_customizer_fonts .nd_options_color_grey,
+    .nd_options_customizer_fonts p,
+    .nd_options_customizer_fonts a,
+    .nd_options_customizer_fonts select,
+    .nd_options_customizer_fonts textarea,
+    .nd_options_customizer_fonts label,
+    .nd_options_customizer_fonts input {
+        color: #878787;
+    }
+    
+    .nd_options_color_grey_important {
+        color: #878787 !important;
+    }
+    /*compatibility with plugin Learning*/
+    
+    #nd_learning_calendar_single_course .ui-datepicker-title {
+        font-family: 'Roboto', sans-serif;
+        color: #444444;
+    }
+    
+    #nd_learning_calendar_single_course .ui-datepicker-calendar th {
+        color: #444444;
+    }
+    /*START FORMS STYLES*/
+    
+    .nd_options_customizer_forms span.wpcf7-not-valid-tip,
+    .nd_options_customizer_forms .wpcf7-response-output.wpcf7-validation-errors {
+        background-color: #6b6978;
+        border-width: 0px;
+        border-color: #6b6978;
+        border-radius: 0px;
+        border-style: solid;
+        padding: 5px;
+        color: #ffffff;
+        margin: 0px;
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    
+    .nd_options_customizer_forms .wpcf7-response-output.wpcf7-mail-sent-ok {
+        background-color: #6b6978;
+        border-width: 0px;
+        border-color: #6b6978;
+        border-radius: 0px;
+        border-style: solid;
+        padding: 5px;
+        color: #ffffff;
+        margin: 0px;
+        margin-top: 10px;
+        font-size: 13px;
+        line-height: 20px;
+    }
+    /*START FORMS STYLES*/
+    
+    .nd_options_customizer_forms input[type="text"],
+    .nd_options_customizer_forms input[type="email"],
+    .nd_options_customizer_forms input[type="url"],
+    .nd_options_customizer_forms input[type="tel"],
+    .nd_options_customizer_forms input[type="number"],
+    .nd_options_customizer_forms input[type="date"],
+    .nd_options_customizer_forms input[type="file"],
+    .nd_options_customizer_forms input[type="password"],
+    .nd_options_customizer_forms select,
+    .nd_options_customizer_forms textarea,
+    .StripeElement {
+        background-color: #f9f9f9;
+        border-width: 1px;
+        border-color: #f1f1f1;
+        border-radius: 0px;
+        border-style: solid;
+        padding: 10px 20px;
+        -webkit-appearance: none;
+        color: #878787;
+    }
+    
+    .nd_options_customizer_forms input[type="text"]::-webkit-input-placeholder,
+    .nd_options_customizer_forms input[type="email"]::-webkit-input-placeholder,
+    .nd_options_customizer_forms input[type="url"]::-webkit-input-placeholder,
+    .nd_options_customizer_forms input[type="tel"]::-webkit-input-placeholder,
+    .nd_options_customizer_forms input[type="password"]::-webkit-input-placeholder,
+    .nd_options_customizer_forms input[type="number"]::-webkit-input-placeholder,
+    .nd_options_customizer_forms textarea::-webkit-input-placeholder {
+        color: #878787;
+    }
+    
+    .nd_options_customizer_forms select {
+        cursor: pointer;
+    }
+    
+    .nd_options_customizer_forms select option {
+        padding: 10px 20px;
+    }
+    /*START FORMS STYLES*/
+    
+    .nd_options_customizer_forms input[type="submit"],
+    .nd_options_customizer_forms button[type="submit"] {
+        background-color: #6b6978;
+        border-width: 0px;
+        border-color: #6b6978;
+        border-radius: 0px;
+        border-style: solid;
+        padding: 10px 20px;
+        -webkit-appearance: none;
+        color: #ffffff;
+        cursor: pointer;
+        font-family: 'Roboto', sans-serif;
+    }
+    
+    .nd_options_cursor_default_a>a {
+        cursor: default;
+    }
+    
+    .nd_options_navigation_type .menu li.nd_options_hot_label>a:after,
+    #nd_options_header_5 .menu li.nd_options_hot_label>a:after {
+        content: "HOT";
+        float: right;
+        background-color: #6b6978;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 10px;
+        line-height: 10px;
+        padding: 3px 5px;
+    }
+    
+    .nd_options_navigation_type .menu li.nd_options_best_label>a:after,
+    #nd_options_header_5 .menu li.nd_options_best_label>a:after {
+        content: "BEST";
+        float: right;
+        background-color: #6b6978;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 10px;
+        line-height: 10px;
+        padding: 3px 5px;
+    }
+    
+    .nd_options_navigation_type .menu li.nd_options_new_label>a:after,
+    #nd_options_header_5 .menu li.nd_options_new_label>a:after {
+        content: "NEW";
+        float: right;
+        background-color: #6b6978;
+        border-radius: 3px;
+        color: #fff;
+        font-size: 10px;
+        line-height: 10px;
+        padding: 3px 5px;
+    }
+    
+    .nd_options_customizer_labels_color_new {
+        background-color: #6b6978;
+    }
+    
+    .nd_options_navigation_search_content_form input[type="search"] {
+        background: none;
+        border: 0px;
+        border-bottom: 2px solid #fff;
+        color: #fff;
+        font-size: 30px;
+        line-height: 30px;
+    }
+    
+    .nd_options_navigation_search_content_form input[type="search"]::-webkit-input-placeholder {
+        color: #fff;
+    }
+    
+    .nd_options_navigation_search_content_form input[type="submit"] {
+        font-size: 25px;
+        line-height: 40px;
+        margin-left: 20px;
+    }
+    
+    .nd_options_navigation_4 div>ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+        text-align: center;
+    }
+    
+    .nd_options_navigation_4 div>ul>li {
+        display: inline-block;
+        padding: 0px;
+    }
+    
+    .nd_options_navigation_4 div>ul>li:after {
+        content: "|";
+        display: inline-block;
+        margin: 0px 20px;
+        color: #c8b28b;
+    }
+    
+    .nd_options_navigation_4 div>ul>li:last-child:after {
+        content: "";
+        margin: 0px;
+    }
+    
+    .nd_options_navigation_4 div li a {
+        color: #727475;
+        font-size: 13px;
+        line-height: 13px;
+        font-family: Roboto;
+        font-weight: lighter;
+        letter-spacing: 3px;
+    }
+    
+    .nd_options_navigation_4 div>ul li:hover>ul.sub-menu {
+        display: block;
+    }
+    
+    .nd_options_navigation_4 div>ul li>ul.sub-menu {
+        z-index: 999;
+        position: absolute;
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+        display: none;
+        margin-left: -20px;
+        padding-top: 16px;
+        width: 200px;
+    }
+    
+    .nd_options_navigation_4 div>ul li>ul.sub-menu>li {
+        padding: 15px 20px;
+        border-bottom: 1px solid #f1f1f1;
+        text-align: left;
+        background-color: #fff;
+        position: relative;
+        box-shadow: 0px 2px 5px #f1f1f1;
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    
+    .nd_options_navigation_4 div>ul li>ul.sub-menu>li:hover {
+        background-color: #f9f9f9;
+    }
+    
+    .nd_options_navigation_4 div>ul li>ul.sub-menu>li:last-child {
+        border-bottom: 0px solid #000;
+    }
+    
+    .nd_options_navigation_4 div>ul li>ul.sub-menu li a {
+        font-size: 12px;
+        color: #444444;
+        float: left;
+        width: 100%;
+    }
+    
+    .nd_options_navigation_4 div>ul li>ul.sub-menu li>ul.sub-menu {
+        margin-left: 180px;
+        top: 0;
+        padding-top: 0;
+        padding-left: 20px;
+    }
+    /*responsive*/
+    
+    .nd_options_navigation_4_sidebar div>ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .nd_options_navigation_4_sidebar div>ul>li {
+        display: inline-block;
+        width: 100%;
+        padding: 0px 0px 20px 0px !important;
+        background-color: transparent;
+    }
+    
+    .nd_options_navigation_4_sidebar div li a {
+        font-family: Roboto;
+    }
+    
+    .nd_options_navigation_4_sidebar div li>a {
+        padding: 10px 0px;
+        display: inline-block;
+        font-size: 24px;
+        font-family: Roboto;
+        text-transform: lowercase;
+        color: #fff;
+    }
+    
+    .nd_options_navigation_4_sidebar div li>a::first-letter {
+        text-transform: uppercase;
+    }
+    
+    .nd_options_navigation_4_sidebar div>ul li>ul.sub-menu {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .nd_options_navigation_4_sidebar div>ul li>ul.sub-menu>li {
+        padding: 0px 20px;
+        text-align: left;
+    }
+    
+    .nd_options_navigation_4_sidebar div>ul li>ul.sub-menu li a {
+        font-size: 14px;
+    }
+    /*top header*/
+    
+    .nd_options_navigation_top_header_4 {
+        font-size: 13px;
+        line-height: 18px;
+    }
+    
+    .nd_options_navigation_top_header_4>ul {
+        list-style: none;
+        margin: 0px;
+        padding: 0px;
+    }
+    
+    .nd_options_navigation_top_header_4>ul>li {
+        display: inline-block;
+    }
+    
+    .nd_options_navigation_top_header_4>ul>li:after {
+        content: "|";
+        display: inline-block;
+        margin: 0px 15px;
+        font-size: 13px;
+    }
+    
+    .nd_options_navigation_top_header_4>ul>li:last-child:after {
+        content: "";
+        margin: 0px;
+    }
+    
+    .nd_options_navigation_top_header_4 li a {
+        font-size: 13px;
+    }
+    
+    .nd_options_navigation_top_header_4>ul li:hover>ul.nd_options_sub_menu {
+        display: block;
+    }
+    
+    .nd_options_navigation_top_header_4>ul li>ul.nd_options_sub_menu {
+        padding: 10px 0px 0px 15px;
+        position: absolute;
+        margin: 0px;
+        list-style: none;
+        display: none;
+        z-index: 9;
+    }
+    
+    .nd_options_navigation_top_header_4>ul li>ul.nd_options_sub_menu>li {
+        padding: 7px 15px;
+        font-size: 13px;
+        border-bottom: 1px solid #595959;
+        background-color: #444444;
+    }
+    
+    .nd_options_navigation_top_header_4>ul li>ul.nd_options_sub_menu>li:last-child {
+        border-bottom: 0px solid #000;
+    }
+    
+    #nd_options_navigation_top_header_4_left div:last-child div a img {
+        margin-right: 0px;
+    }
+    
+    #nd_options_navigation_top_header_4_right div:last-child div a img {
+        margin-left: 0px;
+    }
+    /*arrow for item has children*/
+    
+    .nd_options_navigation_4 .menu ul.sub-menu li.menu-item-has-children>a:after {
+        content: "";
+        float: right;
+        border-style: solid;
+        border-width: 5px 0 5px 5px;
+        border-color: transparent transparent transparent #444444;
+        margin-top: 3px;
+    }
+    /*search*/
+    
+    #nd_options_container_search_icon_navigation {
+        position: absolute;
+        right: 20px;
+        top: 20px;
+    }
+    /*labels*/
+    
+    .nd_options_navigation_4 .menu li.nd_options_new_label>a:after {
+        border-radius: 15px;
+        padding: 3px 8px;
+        letter-spacing: 0px;
+    }
+    
+    .nd_options_navigation_4 .menu li.nd_options_hot_label>a:after {
+        border-radius: 15px;
+        padding: 3px 8px;
+        letter-spacing: 0px;
+    }
+    
+    .nd_options_navigation_4 .menu li.nd_options_best_label>a:after {
+        border-radius: 15px;
+        padding: 3px 8px;
+        letter-spacing: 0px;
+    }
+    /*sidebar*/
+    
+    .wpb_widgetised_column .widget {
+        margin-bottom: 40px;
+    }
+    
+    .wpb_widgetised_column .widget img,
+    .wpb_widgetised_column .widget select {
+        max-width: 100%;
+    }
+    
+    .wpb_widgetised_column .widget h3 {
+        margin-bottom: 20px;
+        font-weight: normal;
+    }
+    /*search*/
+    
+    .wpb_widgetised_column .widget.widget_search input[type="text"] {
+        width: 100%;
+    }
+    
+    .wpb_widgetised_column .widget.widget_search input[type="submit"] {
+        margin-top: 20px;
+    }
+    /*list*/
+    
+    .wpb_widgetised_column .widget ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .wpb_widgetised_column .widget>ul>li {
+        padding: 10px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .wpb_widgetised_column .widget>ul>li:last-child {
+        padding-bottom: 0px;
+        border-bottom: 0px solid #f1f1f1;
+    }
+    
+    .wpb_widgetised_column .widget ul li {
+        padding: 10px;
+    }
+    
+    .wpb_widgetised_column .widget ul.children {
+        padding: 10px;
+    }
+    
+    .wpb_widgetised_column .widget ul.children:last-child {
+        padding-bottom: 0px;
+    }
+    /*calendar*/
+    
+    .wpb_widgetised_column .widget.widget_calendar table {
+        text-align: center;
+        background-color: #fff;
+        width: 100%;
+        border: 1px solid #f1f1f1;
+        line-height: 20px;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table th {
+        padding: 10px 5px;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table td {
+        padding: 10px 5px;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table tbody td a {
+        color: #fff;
+        padding: 5px;
+        border-radius: 3px;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table tfoot td a {
+        color: #fff;
+        background-color: #444444;
+        padding: 5px;
+        border-radius: 15px;
+        font-size: 13px;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table tfoot td {
+        padding-bottom: 20px;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table tfoot td#prev {
+        text-align: right;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table tfoot td#next {
+        text-align: left;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table caption {
+        font-size: 20px;
+        font-weight: bolder;
+        background-color: #f9f9f9;
+        padding: 20px;
+        border: 1px solid #f1f1f1;
+        border-bottom: 0px;
+    }
+    /*color calendar*/
+    
+    .wpb_widgetised_column .widget.widget_calendar table thead {
+        color: #444444;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table tbody td a {
+        background-color: #6b6978;
+    }
+    
+    .wpb_widgetised_column .widget.widget_calendar table caption {
+        color: #444444;
+        font-family: 'Roboto', sans-serif;
+    }
+    /*menu*/
+    
+    .wpb_widgetised_column .widget div ul {
+        margin: 0px;
+        padding: 0px;
+        list-style: none;
+    }
+    
+    .wpb_widgetised_column .widget div>ul>li {
+        padding: 10px;
+        border-bottom: 1px solid #f1f1f1;
+    }
+    
+    .wpb_widgetised_column .widget div>ul>li:last-child {
+        padding-bottom: 0px;
+        border-bottom: 0px solid #f1f1f1;
+    }
+    
+    .wpb_widgetised_column .widget div ul li {
+        padding: 10px;
+    }
+    
+    .wpb_widgetised_column .widget div ul.sub-menu {
+        padding: 10px;
+    }
+    
+    .wpb_widgetised_column .widget div ul.sub-menu:last-child {
+        padding-bottom: 0px;
+    }
+    /*tag*/
+    
+    .wpb_widgetised_column .widget.widget_tag_cloud a {
+        padding: 5px 10px;
+        border: 1px solid #f1f1f1;
+        border-radius: 15px;
+        display: inline-block;
+        margin: 5px;
+        margin-left: 0px;
+        font-size: 13px !important;
+        line-height: 20px;
+    }
+    
+    .nd_options_bottom_20 {
+        display: none;
+    }
+    
+    .wpb_animate_when_almost_visible {
+        opacity: 1;
+    }
+    
+    .nd_options_typewriter_87 .typed-cursor {
+        font-size: 20px;
+        color: #ffffff;
+    }
+    
+    .nd_options_typewriter_10 .typed-cursor {
+        font-size: 20px;
+        color: #ffffff;
+    }
+    
+    #nd_options_shortcode_cf7_1199 input[type="text"],
+    #nd_options_shortcode_cf7_1199 input[type="email"],
+    #nd_options_shortcode_cf7_1199 input[type="url"],
+    #nd_options_shortcode_cf7_1199 input[type="tel"],
+    #nd_options_shortcode_cf7_1199 input[type="number"],
+    #nd_options_shortcode_cf7_1199 input[type="date"],
+    #nd_options_shortcode_cf7_1199 input[type="checkbox"],
+    #nd_options_shortcode_cf7_1199 input[type="file"],
+    #nd_options_shortcode_cf7_1199 input[type="submit"],
+    #nd_options_shortcode_cf7_1199 textarea,
+    #nd_options_shortcode_cf7_1199 label,
+    #nd_options_shortcode_cf7_1199 select {
+        width: 100%;
+    }
+    
+    .nd_options_customizer_forms span.wpcf7-not-valid-tip,
+    .nd_options_customizer_forms .wpcf7-response-output.wpcf7-validation-errors,
+    .nd_options_customizer_forms .wpcf7-response-output.wpcf7-mail-sent-ok {
+        float: left;
+        width: 100%;
+        box-sizing: border-box;
+    }

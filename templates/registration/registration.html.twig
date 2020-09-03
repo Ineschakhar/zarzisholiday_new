@@ -1,0 +1,16 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+    <div class="title text-center"> <h1>Inscription </h1></div>
+    <div class="container mb-5 mt-5">
+            {{ form_start(formUser) }}
+            {{ form_widget(formUser) }}
+        <button class="btn btn-success" style="margin-left: 472px;margin-top: 18px;" type="submit">Enregistrer</button>
+
+{#        <input type="submit" class="btn btn-primary"/>#}
+            {{ form_end(formUser) }}
+    </div>
+
+
+{% endblock %}

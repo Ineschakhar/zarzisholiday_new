@@ -1,0 +1,256 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Hello Admin dashboard !
+{% endblock %}
+
+{% block body %}
+<SCRIPT language="JavaScript" type="text/javascript">
+    function openWin(windowURL, windowName, windowFeatures) {
+        window.open(windowURL, windowName, windowFeatures);
+    }
+</SCRIPT>
+
+<body
+    class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
+    <div class="page-wrapper">
+
+        <!-- start page container -->
+        <div class="page-content-wrapper">
+            <div class="page-content" >
+                <!-- START CONTENT-->
+                <!-- start page content -->
+<div class="page-bar" style=" margin-top: 50px;">
+
+                    <div class="page-title-breadcrumb">
+                        <div class=" pull-left">
+                            <div class="page-title">All Appartements</div>
+                        </div>
+                        <ol class="breadcrumb page-breadcrumb pull-right">
+                            <li>
+                                <i class="fa fa-home"></i>&nbsp;<a class="parent-item"
+                                    href="index.html">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+<a class="parent-item" href="">Appartements</a>&nbsp;<i class="fa fa-angle-right"></i>
+
+                            </li>
+<li class="active">All Appartements</li>
+
+                        </ol>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="card card-box">
+                            <div class="card-head">
+                                <header>All Bookings</header>
+                                <div class="tools">
+                                    <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                </div>
+                            </div>
+                            <div class="card-body ">
+                                <div class="row p-b-20">
+                                    <div class="col-md-6 col-sm-6 col-6">
+                                        <div class="btn-group">
+<a href="{{ path('admin_appartement_new') }}" id=" add Appartment " class=" btn btn-info">
+
+                                                Add New
+                                                <i class="fa fa-plus"></i>
+                                            </a>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6 col-sm-6 col-6">
+                                        <div class="btn-group pull-right">
+                                            <a class="btn deepPink-bgcolor  btn-outline dropdown-toggle"
+                                                data-toggle="dropdown">Tools
+                                                <i class="fa fa-angle-down"></i>
+                                            </a>
+                                            <ul class="dropdown-menu pull-right">
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <i class="fa fa-print"></i>
+                                                        Print
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <i class="fa fa-file-pdf-o"></i>
+                                                        Save as PDF
+                                                    </a>
+                                                </li>
+                                                <li>
+                                                    <a href="javascript:;">
+                                                        <i class="fa fa-file-excel-o"></i>
+                                                        Export to Excel
+                                                    </a>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="table-scrollable">
+                                    <table class="table table-hover table-checkable order-column full-width"
+                                        id="example4">
+                                        <thead>
+                                            <tr> 
+                                                <th class="center">
+                                                    Id
+                                                </th>
+                                                <th class="center">
+                                                    Title
+                                                </th>
+                                                <th class="center">image</th>
+
+                                                </th>
+                                                <th class="center">
+                                                    Price
+
+                                                </th>
+                                                <th class="center">
+
+
+                                                    Adress
+
+                                                </th>
+<th>Rooms</th>
+
+                                                <th class="center">
+                                                    Espace
+                                                </th>
+                                                <th class="center">
+                                                    Nbrpersonne
+                                                </th>
+                                                <th class="center">
+                                                    Category
+                                                </th>
+                                                <th class="center">
+                                                    Description
+</th>
+
+                                                <th class="center">
+                                                    PostalCode
+                                                </th>       
+<th class="center">
+	Action
+</th>
+
+                                                <th class="center">
+                                                    IsPublished
+                                                </th>
+                                                <th class="center">
+                                                    I.Gallery
+                                                </th>
+                                                <th class="center">
+                                                    CreatedAt
+                                                </th>
+                                                <th class="center">
+                                                    UpdatedAt
+                                                </th>
+
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+{% for appartement in appartements %}
+
+                                            <tr class="odd gradeX">
+                                                <td class="user-circle-img">
+{{ appartement.id }}
+
+                                                </td>
+<td class="center">
+	{{ appartement.title }}</td>
+
+                                                <td class="center">
+                                                    <a href="tel:4444565756">
+<img src="{{ asset('uploads/' ~ appartement.image) }}" height="40">
+
+                                                    </a>
+                                                </td>
+                                                <td class="center">
+                                                    <a href="#">
+{{ appartement.price }}
+
+                                                    </a>
+                                                </td>
+<td class="center">
+	{{ appartement.adress }}
+    </td>
+<td class="center">
+ 	<a href="javascript:openWin('{{ path('admin_image_new', {'id': appartement.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=50,left=100,menuBar=no,scrollBars=yes,resizable=no,width=900,height=600');">
+
+		<img src="{{asset('sharan/images/room_pic3.jpg') }}" height="40" title="Rooms">
+
+
+	</a>
+</td>
+
+<td class="center">{{ appartement.espace }}</td>
+
+<td class="center">
+	{{ appartement.nbrpersonne }}</td>
+
+<td class="center">
+	{# {{ appartement.Category }} #}</td>
+
+<td class="center">
+	{{ appartement.description }}</td>
+
+<td class="center">
+	{{ appartement.postalCode }}</td>
+<td class="center">
+	<a href="{{ path('admin_appartement_edit', {'id': appartement.id}) }}" class="btn btn-tbl-edit btn-xs">
+
+		<i class="fa fa-pencil"></i>
+	</a>
+	<button class="mdl-button mdl-js-button mdl-button--fab mdl-button--mini-fab mdl-button--colored">
+
+		<a href="{{ path('admin_appartement_show', {'id': appartement.id}) }}">
+			<i class="fa fa-eye "></i>
+		</a>
+	</button>
+</td>
+
+
+<td class="center">
+	{{ appartement.isPublished ? 'Yes' : 'No' }}</td>
+
+<td class="center">
+	<a href="javascript:openWin('{{ path('admin_appartement_show', {'id': appartement.id}) }}','','toolbar=no,location=no,directories=0,status=no,top=50,left=100,menuBar=no,scrollBars=yes,resizable=no,width=900,height=600');">
+
+		<img src="{{asset('sharan/images/favicon.png') }}" height="40" title="İmage Gallery">
+
+
+	</a>
+</td>
+
+<td class="center">{{ appartement.createdAt ? appartement.createdAt|date('Y-m-d H:i:s') : '' }}
+</td>
+
+<td class="center">
+	{{ appartement.updatedAt ? appartement.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+  
+
+                                          
+                                            </tr>
+                                           
+                                                
+{% else %}
+<tr>
+	<td colspan="12">no records found</td>
+</tr>{% endfor %}
+
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div> 
+                    <!-- END CONTENT-->
+
+                </div>
+            </div>  
+</div><!-- end page container -->
+</div>
+</body>{% endblock %}

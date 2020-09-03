@@ -1,0 +1,78 @@
+ 
+{% block stylesheets %}
+	<link href="{{ asset('css/CssAll.css') }}" type="text/css" rel="stylesheet"/>
+	<link href="{{ asset('css/style.css') }}" type="²text/css" rel="stylesheet"/>
+	<!--SHARAN CSS -->
+
+	<!-- BOOTSTRAP STYLE SHEET -->
+	<link
+	rel="stylesheet" type="text/css" href="{{ asset('bootstrap/bootstrap.min.css') }}">
+	 <!-- BOOTSTRAP DATEPICKER STYLE SHEET -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('sharan/t-datepicker.min.css') }}">
+	<link	rel="stylesheet" type="text/css" href="{{ asset('sharan/t-datepicker-blue.css') }}">
+
+	<!-- FONTAWESOME STYLE SHEET -->
+	<link	rel="stylesheet" type="text/css" href="{{ asset('sharan/fontawesome/css/font-awesome.min.css')}}"/>
+
+
+	<!-- OWL CAROUSEL STYLE SHEET -->
+	<link	rel="stylesheet" type="text/css" href="{{ asset('sharan/owl.carousel.min.css')}}">
+
+	<!-- MAGNIFIC POPUP STYLE SHEET -->
+	<link
+	rel="stylesheet" type="text/css" href="{{ asset('sharan/magnific-popup.min.css')}}">
+	<!-- LOADER STYLE SHEET -->
+	<link
+	rel="stylesheet" type="text/css" href="{{ asset('sharan/loader.min.css')}}">
+	<!-- MAIN STYLE SHEET -->
+	<link
+	rel="stylesheet" type="text/css" href="{{ asset('sharan/style.css')}}">
+
+	<!-- THEME COLOR CHANGE STYLE SHEET -->
+	<link
+	rel="stylesheet" class="skin" type="text/css" href="{{ asset('sharan/skin/skin-1.css')}}">
+	<!-- SIDE SWITCHER STYLE SHEET -->
+	<link
+	rel="stylesheet" type="text/css" href="{{ asset('sharan/switcher.css')}}">
+	<!-- FLATICON STYLE SHEET -->
+	<link rel="stylesheet" type="text/css" href="{{ asset('sharan/flaticon.min.css')}}">
+
+{% endblock %}
+
+ 
+			{% block javascripts %}
+
+				<script src="{{asset('js/jquery-1.12.4.min.js') }}"></script>
+				<!-- JQUERY.MIN JS -->
+				<script src="{{asset('js/bootstrap.min.js') }}"></script>
+				<!-- BOOTSTRAP.MIN JS -->
+
+				<script src="{{asset('js/magnific-popup.min.js') }}"></script>
+				<!-- MAGNIFIC-POPUP JS -->
+
+				<script src="{{asset('js/waypoints.min.js') }}"></script>
+				<!-- WAYPOINTS JS -->
+				<script src="{{asset('js/counterup.min.js') }}"></script>
+				<!-- COUNTERUP JS -->
+				<script src="{{asset('js/waypoints-sticky.min.js') }}"></script>
+				<!-- COUNTERUP JS -->
+
+				<script src="{{asset('js/isotope.pkgd.min.js') }}"></script>
+				<!-- MASONRY  -->
+
+				<script src="{{asset('js/owl.carousel.min.js') }}"></script>
+				<!-- OWL  SLIDER  -->
+				<script src="{{asset('js/jquery.owl-filter.js') }}"></script>
+
+				<script src="{{asset('js/stellar.min.js') }}"></script>
+				<!-- PARALLAX BG IMAGE   -->
+
+
+				<script src="{{asset('js/custom.js') }}"></script>
+				<!-- CUSTOM FUCTIONS  -->
+
+				<script src="{{asset('js/t-datepicker.min.js') }}"></script>
+				<script src="{{asset('js/switcher.js') }}"></script>
+			{% endblock %}
+
+		{% endblock %}

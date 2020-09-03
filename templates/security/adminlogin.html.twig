@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello SecurityController!{% endblock %}
+
+{% block body %}
+<style>
+    .example-wrapper { margin: 1em auto; max-width: 800px; width: 95%; font: 18px/1.5 sans-serif; }
+    .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
+    .error{color: red}
+</style>
+
+<div class="example-wrapper">
+<!--{% if error %}
+<span class="error">{{ error.messageKey | trans(error.messagedata, 'security')}}</span>
+{% endif %}
+-->
+<a href="{{path('logout')}}" method="post">logout</a>
+
+
+<form action="{{path('login')}}" method="post">
+ 
+
+	<div class="container">
+		<label for="username">
+			<b>Username</b>
+		</label>
+<input type="text" placeholder="Enter Username" value="{{ last_username}}" name="_username" required>
+
+
+		<label for="password">
+			<b>Password</b>
+		</label>
+		<input type="password" placeholder="Enter Password" name="_password" required>
+
+<button type="submit" href="#">Login</button>
+
+
+		<label>
+			<input type="checkbox" checked="checked" name="remember">
+			Remember me
+		</label>
+	</div>
+ 
+</form>
+
+</div>
+{% endblock %}

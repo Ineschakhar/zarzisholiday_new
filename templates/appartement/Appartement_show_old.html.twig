@@ -1,0 +1,77 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Appartement{% endblock %}
+
+{% block body %}
+<h1>Appartement</h1>
+
+<table class="table">
+    <tbody>
+        <tr>
+            <th>Title</th>
+            <td>{{ appartement.title }}</td>
+        </tr>
+        <tr>
+            <th>Price</th>
+            <td>{{ appartement.price }}</td>
+        </tr>
+        <tr>
+            <th>image</th>
+            <td><img src="{{ asset('uploads/' ~ appartement.image) }}" height="80"></td>
+        </tr>
+
+
+
+        <tr>
+            <th>Adress</th>
+            <td>{{ appartement.adress }}</td>
+        </tr>
+        <tr>
+            <th>Espace</th>
+            <td>{{ appartement.espace }}</td>
+        </tr>
+        <tr>
+            <th>Nbrpersonne</th>
+            <td>{{ appartement.nbrpersonne }}</td>
+        </tr>
+        <tr>
+            <th>Description</th>
+            <td>{{ appartement.description }}</td>
+        </tr>
+        <tr>
+            <th>PostalCode</th>
+            <td>{{ appartement.postalCode }}</td>
+        </tr>
+        <tr>
+            <th>IsPublished</th>
+            <td>{{ appartement.isPublished ? 'Yes' : 'No' }}</td>
+        </tr>
+        <tr>
+            <th>Id</th>
+            <td>{{ appartement.id }}</td>
+        </tr>
+        <tr>
+            <th>CreatedAt</th>
+            <td>{{ appartement.createdAt ? appartement.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+        <tr>
+            <th>UpdatedAt</th>
+            <td>{{ appartement.updatedAt ? appartement.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+        </tr>
+    </tbody>
+</table>
+<form action="{{ path('user_reservation_new',{'rid': appartement.id}) }}" method="post">
+
+	Days
+	<input type="number" id="days" name="days" value="1" style="width: 30px">
+	Checkin Date :<input type="date" id="checkin" name="checkin" style="width: 140px" required>
+	<input type="submit" value="Reserve Room" class="btn btn-success">
+</form>
+
+
+<a href="{{ path('appartement_index') }}">back to list</a>
+
+<a href="{{ path('appartement_edit', {'id': appartement.id}) }}">edit</a>
+
+{{ include('appartement/_delete_form.html.twig') }}
+{% endblock %}

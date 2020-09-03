@@ -1,0 +1,100 @@
+{% extends 'userbase.html.twig' %}
+
+{% block title %}Hello User Controller!
+{% endblock %}
+
+{% block body %}
+
+<body
+    class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
+    <!-- start page content -->
+    <div class="page-content-wrapper">
+        <div class="page-content">
+
+            <section id="maincontent">
+                <div class="container">
+                    <div class="row">
+
+                        <div class="span8">
+                            <!-- start article 1 -->
+                            <article class="blog-post">
+                                <div class="post-heading">
+                                    <h3>
+                                        <a href="#">User Reservations List</a>
+                                    </h3>
+                                </div>
+                                <div class="row">
+                                    <div class="span8">
+                                        <table class="table">
+                                            <thead>
+                                                <tr>
+                                                    <th>Hotel</th>
+                                                    {# 														<th>Room</th>
+ #} <th>Name</th>
+                                                    <th>Surname</th>
+                                                    <th>Checkin</th>
+                                                    <th>Checkout</th>
+                                                    <th>Days</th>
+                                                    <th>Total</th>
+                                                    <th>Message</th>
+                                                    <th>Note</th>
+                                                    <th>Status</th>
+                                                    <th>Date</th>
+                                                    <th>actions</th>
+                                                </tr>
+                                            </thead>
+                                            <tbody>
+                                                {% for reservation in reservations %}
+                                                <tr>
+                                                    <td>{{ reservation.rname }}</td>
+                                                    <td>{{ reservation.name }}</td>
+                                                    <td>{{ reservation.surname }}</td>
+                                                    <td>{{ reservation.check_in|date('d-m-Y')}}</td>
+                                                    <td>{{ reservation.check_out|date('d-m-Y')}}</td>
+                                                    <td>{{ reservation.days }}</td>
+                                                    <td>{{ reservation.total }}</td>
+                                                    <td>{{ reservation.message }}</td>
+                                                    {#                                             <td>{{ reservation.note }}</td>
+															 #}
+                                                    <td>{{ reservation.status }}</td>
+                                                    <td>{{ reservation.created_at }}</td>
+                                                    <td></td>
+
+
+                                                    <td>
+<button type="button" href="{{ path('user_reservation_show', {'id': reservation.id}) }}"
+
+                                                            class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-danger"> 
+                                                            <a href="{{ path('user_reservation_show', {'id': reservation.id}) }}">show</a>
+                                                        </button>
+
+                                                       <a
+                                                            href="{{ path('reservation_edit', {'id': reservation.id}) }}">edit</a>
+                                                    </td>
+
+                                                </tr>
+                                                {% else %}
+                                                <tr>
+                                                    <td colspan="19">no records found</td>
+                                                </tr>
+                                                {% endfor %}
+                                            </tbody>
+                                        </table>
+
+                                    </div>
+                                </div>
+                            </article>
+                            <!-- end article 1 -->
+
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+    </div>
+    <!-- end page content -->
+</body>
+
+
+{% endblock %}

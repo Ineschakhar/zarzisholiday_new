@@ -1,0 +1,53 @@
+{% extends 'base.html.twig' %}
+
+{#{% block title %}Appartement index{% endblock %}#}
+
+{% block body %}
+    <div class="container-fluid mb-2 mt-2">
+        <h1 class="text-center">Appartement index</h1>
+        <table class="table">
+            <thead>
+            <tr>
+                <th>Title</th>
+                <th>Price</th>
+                <th>Adress</th>
+                <th>Espace</th>
+                <th>Nbrpersonne</th>
+                <th>Description</th>
+                <th>PostalCode</th>
+                <th>IsPublished</th>
+                <th>Id</th>
+                <th>CreatedAt</th>
+                <th>UpdatedAt</th>
+                <th>actions</th>
+            </tr>
+            </thead>
+            <tbody>
+            {% for appartement in appartements %}
+                <tr>
+                    <td>{{ appartement.title }}</td>
+                    <td>{{ appartement.price }}</td>
+                    <td>{{ appartement.adress }}</td>
+                    <td>{{ appartement.espace }}</td>
+                    <td>{{ appartement.nbrpersonne }}</td>
+                    <td>{{ appartement.description }}</td>
+                    <td>{{ appartement.postalCode }}</td>
+                    <td>{{ appartement.isPublished ? 'Yes' : 'No' }}</td>
+                    <td>{{ appartement.id }}</td>
+                    <td>{{ appartement.createdAt ? appartement.createdAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>{{ appartement.updatedAt ? appartement.updatedAt|date('Y-m-d H:i:s') : '' }}</td>
+                    <td>
+                        <a href="{{ path('appartement_show', {'id': appartement.id}) }}">show</a>
+                        <a href="{{ path('appartement_edit', {'id': appartement.id}) }}">edit</a>
+                    </td>
+                </tr>
+            {% else %}
+                <tr>
+                    <td colspan="12">no records found</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+        <a href="{{ path('appartement_new') }}">Create new</a>
+    </div>
+{% endblock %}

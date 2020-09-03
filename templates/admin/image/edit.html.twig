@@ -1,0 +1,26 @@
+{% extends 'adminbase.html.twig' %}
+
+{% block title %}Edit Image{% endblock %}
+
+{% block body %}
+<body class="page-header-fixed sidemenu-closed-hidelogo page-content-white page-md header-white dark-sidebar-color logo-dark">
+	<div
+		class="page-wrapper">
+		<!-- start page container -->
+		<div class="page-content-wrapper">
+			<div
+				class="page-content"><!-- START CONTENT-->
+
+
+    <h1>Edit Image</h1>
+
+    {{ include('admin/image/_form.html.twig', {'button_label': 'Update'}) }}
+
+    <a href="{{ path('admin_image_index') }}">back to list</a>
+
+    {{ include('admin/image/_delete_form.html.twig') }}
+			</div>
+		</div>
+	</div>
+</body>
+{% endblock %}

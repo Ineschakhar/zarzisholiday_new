@@ -5,23 +5,23 @@ namespace App\Controller;
 use App\Entity\User;
 use App\Form\UserType;
 use App\Entity\Comment;
-use App\Repository\UserRepository;
-use App\Repository\ReservationRepository; 
 use App\Form\CommentType; 
+use App\Entity\Reservation; 
 use App\Form\ReservationType;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use App\Repository\UserRepository;
+use Symfony\Component\Mime\Email; 
+use Symfony\Component\Mailer\Mailer; 
+use App\Repository\CommentRepository; 
+use App\Repository\AppartementRepository;
+use App\Repository\ReservationRepository; 
 use Symfony\Component\HttpFoundation\Request;
+use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\Routing\Annotation\Route;
-
-use App\Repository\AppartementRepository;
-use App\Repository\CommentRepository; 
-use App\Entity\Reservation; 
-use Symfony\Component\Mailer\Bridge\Google\Smtp\GmailTransport;
-use Symfony\Component\Mailer\Mailer; 
+use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Mailer\Transport\TransportInterface;
-use Symfony\Component\Mailer\MailerInterface;
-use Symfony\Component\Mime\Email; 
+use Symfony\Component\Mailer\Bridge\Google\Smtp\GmailTransport;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\File\Exception\FileException;
 /**
  * @Route("/user")
@@ -99,15 +99,18 @@ class UserController extends AbstractController
         // uniqid(), which is based on timestamps
         return md5(uniqid());
     }
-
     /**
      * @Route("/reservation/{rid}", name="user_reservation_new", methods={"GET","POST"})
+     * @param Session $session
+     * @param Request $request
+     * @param $rid
+     * @param AppartementRepository $appartementRepository
+     * @return Response
      */
-    public function newreservation(Request $request, $rid, AppartementRepository $appartementRepository/* , \Swift_mailer $mailer */): Response
+    public function newreservation(Session $session, Request $request, $rid, AppartementRepository $appartementRepository/* , \Swift_mailer $mailer */): Response
     {
-
         $appartement = $appartementRepository->findOneBy(['id' => $rid]);
- 
+
         $days = $_REQUEST["days"];
         $checkin = $_REQUEST["checkin"];
         $checkout = Date("Y-m-d H:i:s", strtotime($checkin . " $days Day")); // Adding days to date
@@ -117,9 +120,10 @@ class UserController extends AbstractController
         $data["days"] = $days;
         $data["checkin"] = $checkin;
         $data["checkout"] = $checkout;
-        //  print_r($data);
+        $data["date"] = $checkin;
+        $data["price"] =  $appartement->getPrice();
 
-        // die();
+        $session->set("data", $data);
 
         $reservation = new Reservation();
         $form = $this->createForm(ReservationType::class, $reservation);
@@ -127,7 +131,7 @@ class UserController extends AbstractController
 
 
         $submittedToken = $request->request->get('token');
-        if ($form->isSubmitted()) {
+        if ($form->isSubmitted() &&  $form->isValid()) {
             if ($this->isCsrfTokenValid('form-reservation', $submittedToken)) {
                 $entityManager = $this->getDoctrine()->getManager();
 
@@ -151,8 +155,8 @@ class UserController extends AbstractController
                 $entityManager->flush();
 
 
-/*Swift mailer*/
- /*    $message = (new \Swift_Message('Hello Email'))
+                /*Swift mailer*/
+                /*    $message = (new \Swift_Message('Hello Email'))
         ->setFrom('ineschakhar@gmail.com')
         ->setTo('ineschakhar@gmail.com')
         ->setBody(
@@ -162,9 +166,9 @@ class UserController extends AbstractController
     $mailer->send($message);
     $this->addFlash('success', ' A vérification message was sent to your email');
   */
-    /*Swift mailer */
+                /*Swift mailer */
 
-      /*           //********** SEND EMAIL ***********************>>>>>>>>>>>>>>>
+                /*           //********** SEND EMAIL ***********************>>>>>>>>>>>>>>>
                 $email = (new Email())
                     ->from($user->getEmail())
                     ->to($form['email']->getData())
@@ -194,11 +198,12 @@ class UserController extends AbstractController
 
         return $this->render('user/newreservation.html.twig', [
             'reservation' => $reservation,
-            'appartement' => $appartement, 
+            'appartement' => $appartement,
             'data' => $data,
             'form' => $form->createView(),
         ]);
     }
+
     /**
      * @Route("/reservations", name="user_reservations", methods={"GET"})
      */ 

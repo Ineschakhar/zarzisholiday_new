@@ -1,0 +1,134 @@
+{% extends 'base.html.twig' %}
+{# Template payement : https://bootsnipp.com/snippets/r1jz#}
+{% block body %}
+<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+
+<style>
+    body {
+        margin-top: 20px;
+    }
+
+    .panel-title {
+        display: inline;
+        font-weight: bold;
+    }
+
+    .checkbox.pull-right {
+        margin: 0;
+    }
+
+    .pl-ziro {
+        padding-left: 0;
+    }
+</style>
+
+<div class="container-fluid center-block" style="margin-top: 200px">
+
+    <div class="row">
+        <div class="col-xs-4"></div>
+        <div class="col-xs-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h3 class="panel-title">
+                        Payment Details
+                    </h3>
+                </div>
+                <div class="panel-body">
+                    <form method="post">
+                        <div class="container">
+                            <div id="errors"></div>
+                            <p></p>
+                            <div class="input-group" style="width: 480px;height: 40px">
+                                <input type="text" id="cardholder-name" class="form-control"
+                                    placeholder="Titulaire de la carte" required autofocus style="height: 40px">
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-user"></span>
+                                </span>
+                            </div>
+                            <br>
+                            <div class="input-group" style="width: 480px;">
+                                <div id="card-elements" class="form-control" style="height: 40px"></div>
+                                <span class="input-group-addon">
+                                    <span class="glyphicon glyphicon-lock"></span>
+                                </span>
+                            </div>
+                            <p></p>
+                            <div id="card-errors" role="alert"></div>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+            <ul class="nav nav-pills nav-stacked">
+                <li class="active">
+                    <div class="btn btn-primary btn-lg btn-block" disabled>
+                        <span style="float: right;margin-right: 20px;">
+                            <span class="glyphicon glyphicon-eur" style="font-size: small"></span>
+                            {{ prix }}</span>
+                        Final Payment
+                    </div>
+                </li>
+            </ul>
+            <br />
+            <button id="card-button" type="button" data-secret="{{ client_secret }}"
+                class="btn btn-success btn-lg btn-block">Procéder au paiement</button>
+        </div>
+        <div class="col-xs-4"></div>
+    </div>
+</div>
+
+{% endblock %}
+
+{% block javascripts %}
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+    window.onload = () => { // Variables
+        let stripe = Stripe(
+        'pk_test_51HNMhJD3fCN89TSWQ5p1et1fQBQrzQuDwQ1IHyfItcRKjDudG08pMMTxOrM8WHQCjZOQUMpxZq8TcWWxYR1i2u5200uUAwHKpt'
+            //'pk_live_51HOin5ERvADcD32u4hKnaxWGlcH4hFqpwKDMJ9EyI0mjyhhZ4an4yf8raD6WM1iAdSTlWPAFEzkSH6dmcJCmSWET00L8eVQYoe'
+            )
+        let elements = stripe.elements()
+        let redirect = "{{ path('validation') }}"
+
+        // Objets de la page
+        let cardHolderName = document.getElementById("cardholder-name")
+        let cardButton = document.getElementById("card-button")
+        let clientSecret = cardButton.dataset.secret;
+
+
+        // Crée les éléments du formulaire de carte bancaire
+        let card = elements.create("card")
+        card.mount("#card-elements")
+
+        // On gère la saisie
+        card.addEventListener("change", (event) => {
+            let displayError = document.getElementById("card-errors")
+            if (event.error) {
+                displayError.textContent = event.error.message;
+            } else {
+                displayError.textContent = "";
+            }
+        })
+
+        // On gère le paiement
+        cardButton.addEventListener("click", () => {
+            stripe.handleCardPayment(clientSecret, card, {
+                payment_method_data: {
+                    billing_details: {
+                        name: cardHolderName.value
+                    }
+                }
+            }).then((result) => {
+                if (result.error) {
+                    document.getElementById("errors").innerText = result.error.message
+                } else {
+                    document.location.href = redirect
+                }
+            })
+        })
+
+    }
+</script>
+
+{% endblock %}

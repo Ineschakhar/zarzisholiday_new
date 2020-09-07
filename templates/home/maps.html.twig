@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>OpenStreetMap</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
+        integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
+        crossorigin="" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet.markercluster@1.4.1/dist/MarkerCluster.Default.css">
+    <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css'
+        rel='stylesheet' />
+
+    <!-- CSS -->
+    <style>
+        #maCarte {
+            height: 500px;
+            width: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="maCarte"></div>
+
+    <!-- Fichiers Javascript -->
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"
+        integrity="sha512-XQoYMqMTK8LvdxXYG3nZ448hOEQiglfqkJs1NOQV44cWnUrBc8PkAOcXy20w0vlaXaVUearIOBhiXZ5V3ynxwA=="
+        crossorigin=""></script>
+    <script src="https://unpkg.com/leaflet.markercluster@1.4.1/dist/leaflet.markercluster.js"></script>
+    <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
+
+    <script>
+        var villes = {
+            "Café lala mariem": {
+                "lat": 33.58737815,
+                "lon": 11.07850626
+            },
+            "Zita beach Restaurant": {
+                "lat": 33.543067,
+                "lon": 11.113102
+            },
+            "montassir": {
+                "lat": 33.58545,
+                "lon": 11.08246
+            },
+            "Restaurant SULTAN PLAGE CHEZ MOMO": {
+                "lat": 33.518508,
+                "lon": 11.115545
+            }
+        };
+        var tableauMarqueurs = [];
+
+        // On initialise la carte
+        var carte = L.map('maCarte').setView([
+            48.852969, 2.349903
+        ], 13);
+        // 13
+
+        // On charge les "tuiles"
+        L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+            minZoom: 3,
+            maxZoom: 18, // 22,
+            tileSize: 512,
+            zoomOffset: -1,
+            detectRetina: true
+        }).addTo(carte);
+
+        var circle = L.circle([
+            33.518508, 11.115545
+        ], {
+            color: 'red',
+            fillColor: '#f03',
+            fillOpacity: 0.5,
+            radius: 500
+        }).addTo(carte);
+
+        // ////////////////////////////////////////////////
+        // Adding a polygon:
+        // var polygon = L.polygon([
+        //     [33.518508,  11.115545],
+        //     [33.58737815, 11.07850626],
+        //     [33.58545,  11.08246 ],
+        //     [33.543067, 11.113102]
+        // ]).addTo(carte);
+        // ////////////////////////////////////////////////
+        // function onMapClick(e) {
+        //     alert("You clicked the map at " + e.latlng);
+        // }
+        // carte.on('click', onMapClick);
+        // ////////////////////////////////////////////////
+        // var popup = L.popup();
+        // function onMapClick(e) {
+        //     popup
+        //         .setLatLng(e.latlng)
+        //         .setContent("You clicked the map at " + e.latlng.toString())
+        //         .openOn(carte);
+        // }
+        // carte.on('click', onMapClick);
+        // ////////////////////////////////////////////////
+        // Create a new map with a fullscreen button:
+        // https://github.com/brunob/leaflet.fullscreen
+        // ////////////////////////////////////////////////
+
+        // ////////////////////////////////////////////////
+
+        var marqueurs = L.markerClusterGroup();
+        var img = new Image();
+        //path = "/zarzis/images/pin.png";
+        //pin = img.src = path
+        pin=img.src = "https://i.pinimg.com/originals/58/fc/d5/58fcd504bc0f87fcdef5ed0614a7e9a9.png"
+        // On personnalise le marqueur
+        var icone = L.icon({
+            iconUrl: pin,
+            iconSize: [
+                30, 50
+            ],
+            iconAnchor: [
+                25, 50
+            ],
+            popupAnchor: [0, -50]
+        })
+
+        // On parcourt les différentes villes
+        for (ville in villes) { // On crée le marqueur et on lui attribue une popup
+            var marqueur = L.marker([
+                villes[ville].lat,
+                villes[ville].lon
+            ], {
+                icon: icone
+            }); // .addTo(carte); Inutile lors de l'utilisation des clusters
+            marqueur.bindPopup("<p>" + ville + "</p>");
+            marqueurs.addLayer(marqueur);
+            // On ajoute le marqueur au groupe
+
+            // On ajoute le marqueur au tableau
+            tableauMarqueurs.push(marqueur);
+        }
+        // On regroupe les marqueurs dans un groupe Leaflet
+        var groupe = new L.featureGroup(tableauMarqueurs);
+
+        // On adapte le zoom au groupe
+        carte.fitBounds(groupe.getBounds().pad(0.5));
+
+        carte.addLayer(marqueurs);
+    </script>
+</body>
+
+</html>

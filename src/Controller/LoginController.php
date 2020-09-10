@@ -16,17 +16,15 @@ class LoginController extends AbstractController
      */
     public function login(AuthenticationUtils $authenticationUtils): Response
     {
-        if ($this->getUser()) {
-            $user = $this->getUser(); // Get login User data
-            if ($user->getRoles() == 'ROLE_ADMIN')
-            return $this->redirectToRoute('dashboard');
-            else
-                return $this->redirectToRoute('home');
-        }
+        // if ($this->getUser()) {
+        //     $user = $this->getUser(); // Get login User data
+        //     if ($user->getRoles() == 'ROLE_ADMIN')
+        //     return $this->redirectToRoute('dashboard');
+        //     else
+        //         return $this->redirectToRoute('home');
+        // }
         $lastUserName = $authenticationUtils->getLastUsername();
         $error = $authenticationUtils->getLastAuthenticationError();
-//        dump($lastUserName);
-//        dump($error);die;
 
         return $this->render('security/login.html.twig',array(
             'last_username'=> $lastUserName,

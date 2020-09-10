@@ -28,10 +28,11 @@
                         <ol class="breadcrumb page-breadcrumb pull-right">
                             <li>
                                 <i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                    href="index.html">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
+href="{{ path('admin') }}">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
+
                             </li>
                             <li>
-<a class="parent-item" href="">Appartements</a>&nbsp;<i class="fa fa-angle-right"></i>
+<a class="parent-item" href="#">Appartements</a>&nbsp;<i class="fa fa-angle-right"></i>
 
                             </li>
 <li class="active">All Appartements</li>
@@ -43,11 +44,11 @@
                     <div class="col-md-12">
                         <div class="card card-box">
                             <div class="card-head">
-                                <header>All Bookings</header>
+                                <header>All Appartments</header>
                                 <div class="tools">
-                                    <a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
-                                    <a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-                                    <a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+                                    <a class="fa fa-repeat btn-color box-refresh" href="#"></a>
+                                    <a class="t-collapse btn-color fa fa-chevron-down" href="#"></a>
+                                    <a class="t-close btn-color fa fa-times" href="#"></a>
                                 </div>
                             </div>
                             <div class="card-body ">
@@ -163,7 +164,7 @@
 	{{ appartement.title }}</td>
 
                                                 <td class="center">
-                                                    <a href="tel:4444565756">
+                                                    <a href="#">
 <img src="{{ asset('uploads/' ~ appartement.image) }}" height="40">
 
                                                     </a>

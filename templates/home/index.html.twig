@@ -16,7 +16,8 @@
 					<div class="container">
 						<div class="logo-header">
 							<div class="logo-header-inner logo-header-one">
-								<a href="index.html">
+<a href="{{ path('home') }}">
+
 									<img src="zarzis/images/zarzis_logo.png" alt="" />
 								</a>
 							</div>
@@ -36,13 +37,16 @@
 									<i class="fa fa-envelope-o"></i>
 								</a>
 							</div>
+							
 							<div class="extra-cell">
 								<a href="#search" class=" text-white">
-									<i class="fa fa-search"></i>
+<i href="href=" {{ path('reservation_index') }} " class="fa fa-search"></i>
+
 								</a>
 							</div>
 							<div class="extra-cell">
-								<a href="javascript:;" class="socialicon_show  text-white">
+							<a href="javascript:;" class="socialicon_show  text-white">
+
 									<i class="fa fa-share-alt"></i>
 								</a>
 							</div>
@@ -52,26 +56,26 @@
 						<!-- Social Nav -->
 						<div class="social_hide">
 							<div class="side-social-nav">
-								<a href="javascript:void(0)" class="socialicon_close">&times;</a>
+								<a href="#" class="socialicon_close">&times;</a>
 								<ul class="list-unstyled">
 									<li>
-										<a href="javascript:void(0);" class="fa fa-facebook">
+										<a href="#" class="fa fa-facebook">
 											<span class="social-tooltip">Facebook</span>
 										</a>
 									</li>
 
 									<li>
-										<a href="javascript:void(0);" class="fa fa-linkedin">
+										<a href="#" class="fa fa-linkedin">
 											<span class="social-tooltip">Linkedin</span>
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);" class="fa fa-google-plus">
+										<a href="#" class="fa fa-google-plus">
 											<span class="social-tooltip">Google Plus</span>
 										</a>
 									</li>
 									<li>
-										<a href="javascript:void(0);" class="fa fa-instagram">
+										<a href="" class="fa fa-instagram">
 											<span class="social-tooltip">Instagram</span>
 										</a>
 									</li>
@@ -217,7 +221,9 @@
 									<a href="{{ path('contact') }}">CONTACT</a>
 								</li>
 								<li>
-									<a href="{{ path('contact') }}">User Account</a>
+<a href="#{# {{ path('user_test', {'id': user.id } ) }} #}">User Account</a>
+
+
 								</li>
 								<li>
 									<a href="#">Login as </a>
@@ -594,10 +600,10 @@
 				<div class="container">
 					<div class="booking-bar-inner bg-primary">
 						<div class="booking-fram-name">
-							<h3 class="m-a0">Book A Room</h3>
+							<h3 class="m-a0">Book An Appartment</h3>
 						</div>
 						<div class="booking-form">
-							<form>
+							<form action="{{path('reservation_index')}}" method="get">
 								<ul>
 									<li class="date-cal-block">
 										<div class="form-group clearfix">
@@ -654,9 +660,8 @@
 									<li class="booking-form-btn-block">
 										<div class="form-group">
 <button type="submit" class="site-button-secondry btn-half">
-<span href="{{path('reservation_index')}}">  
-
-													CHECK AVAILABILITY</span>
+ 
+													CHECK AVAILABILITY 
 												<em></em>
 											</button>
 										</div>
@@ -762,7 +767,7 @@
 										</div>
 									</div>
 								</div>
-								<a href="javascript:void(0);" class="btn-half site-button button-lg m-b30">
+								<a href="#" class="btn-half site-button button-lg m-b30">
 									<span>EN SAVOIR PLUS</span>
 									<em></em>
 								</a>
@@ -874,7 +879,7 @@
 											</ul>
 										</div>
 									</div>
-									<a href="room-detail.html" class="btn-half site-button button-lg">
+									<a href="#" class="btn-half site-button button-lg">
 										<span>FULL INFO
 										</span>
 										<em></em>
@@ -1100,147 +1105,13 @@
 
 			</div>
 			<!-- ROOMS  SLIDER END -->
-
-			<!-- OUR BLOG START -->
-			<div class="section-full p-t80 p-b50 bg-white">
-
-				<div class="container">
-
-					<!-- TITLE START -->
-					<div class="section-head text-left">
-						<h2 class="m-b5" data-title="Appartment">Our Latest Appartment</h2>
-						<div class="wt-separator-outer">
-							<div class="wt-separator bg-primary"></div>
-						</div>
-					</div>
-					<!-- TITLE END -->
-
-					<!-- IMAGE CAROUSEL START -->
-					<div class="section-content">
-
-
-						<div class="row">
-
-							<div class="col-md-6 col-sm-6">
-								<div class="blog-post latest-blog-1 date-style-2">
-									<div class="wt-post-media wt-img-effect zoom-slow">
-										<a href="javascript:;"><img style=" height:350px;" src="zarzis/images/zeze.jpg"
-												alt=""></a>
-									</div>
-									<div class="wt-post-info">
-										<div class="post-date">
-											<strong>20 Mar 2019
-											</strong>
-										</div>
-
-										<div class="wt-post-meta">
-											<ul class="clearfix">
-												<li class="post-author">
-													<div class="post-author-pic">
-														<span><img src="zarzis/images/img_1103_scaled.jpg"
-																alt=""></span>
-														<span>
-															<strong>
-																By</strong>
-															<a href="javascript:;">Zarzis Holiday</a>
-														</span>
-													</div>
-												</li>
-												<li class="post-comment">
-													<i class="fa fa fa-comments text-primary"></i>
-													<a href="javascript:;">10 Comment</a>
-												</li>
-											</ul>
-										</div>
-
-										<div class="wt-post-title">
-											<h3 class="post-title">
-												<a href="javascript:;">Your first source for architecture, dsign and art
-													news.</a>
-											</h3>
-										</div>
-
-										<div class="wt-post-text">
-											<p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur
-												quibusd veritatis quisquam laboriosam asperiores, tenetur,
-												blanditiis,quaerat odit ex exercitationem pariatur.</p>
-										</div>
-
-										<div class="readmore-line">
-											<a href="javascript:;"
-												class="site-button-ink text-primary font-weight-900 ">Read More</a>
-										</div>
-
-									</div>
-								</div>
-							</div>
-
-							<div class="col-md-6 col-sm-6">
-								<div class="blog-post latest-blog-1 date-style-2">
-									<div class="wt-post-media wt-img-effect zoom-slow">
-										<a href="javascript:;"><img style=" height:350px;" src="zarzis/images/bbbb.jpg"
-												alt=""></a>
-									</div>
-									<div class="wt-post-info">
-										<div class="post-date">
-											<strong>20 Mar 2019
-											</strong>
-										</div>
-
-										<div class="wt-post-meta">
-											<ul class="clearfix">
-												<li class="post-author">
-													<div class="post-author-pic">
-														<span><img src="zarzis/images/img_1103_scaled.jpg"
-																alt=""></span>
-														<span>
-															<strong>
-																By</strong>
-															<a href="javascript:;">Zarzis Holidays</a>
-														</span>
-													</div>
-												</li>
-												<li class="post-comment">
-													<i class="fa fa fa-comments text-primary"></i>
-													<a href="javascript:;">10 Comment</a>
-												</li>
-											</ul>
-										</div>
-
-										<div class="wt-post-title">
-											<h3 class="post-title">
-												<a href="javascript:;">Your first source for architecture, dsign and art
-													news.</a>
-											</h3>
-										</div>
-
-										<div class="wt-post-text">
-											<p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem pariatur
-												quibusd veritatis quisquam laboriosam asperiores, tenetur,
-												blanditiis,quaerat odit ex exercitationem pariatur.</p>
-										</div>
-
-										<div class="readmore-line">
-											<a href="javascript:;"
-												class="site-button-ink text-primary font-weight-900 ">Read More</a>
-										</div>
-
-									</div>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</div>
-
-			</div>
-			<!-- OUR BLOG END -->
+ 
 
 			<!-- YOUTUBE VIDEO WITH POPUP -->
 			<div class="m-b30">
 				<!-- TITLE START -->
 				<div class="section-head">
-					<h2 class=" m-b5">Video Youtube with popup</h2>
+					<h2 class=" m-b5"> See the video for more details</h2>
 					<div class="wt-separator-outer">
 						<div class="wt-separator bg-primary"></div>
 					</div>
@@ -1260,122 +1131,7 @@
 					</div>
 				</div>
 			</div>
-
-			<!-- OUR SPECIALLIZATION START -->
-			<div class="section-full bg-change-section overlay-wraper p-tb80" data-toggle="tab-hover">
-				<div class="overlay-main bg-black opacity-06"></div>
-				<div class="bg-changer">
-					<div class=" section-bg active" style="background-image:url(" images/background/room.jpg")"> </div>
-						<div class="section-bg" style="background-image:url(" images/background/appartment.jpg")">
-						</div> <div class="section-bg" style="background-image:url("
-						images/background/architecture.jpg")"> </div> <div class="section-bg"
-						style="background-image:url(" images/background/interior.jpg")"> </div> </div> <div
-						class="container">
-						<!-- TITLE START -->
-						<div class="section-head text-left">
-							<h2 class="m-b5 text-white" data-title="Specialization">Our Specialization</h2>
-							<div class="wt-separator-outer">
-								<div class="wt-separator bg-primary"></div>
-							</div>
-						</div>
-						<!-- TITLE END -->
-						<div class="row">
-							<div class="col-md-6">
-								<div class="services-part-left ">
-									<div class="text-white">
-										<h3 class=" m-t0">Discover a hotel that defines a new dimension of luxury.</h3>
-										<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Mauris ferme ntum
-											dictum magna. Sed laoreet aliquam leo. Ut tellus dolor, dapibus eget,
-											elementum vel, cursus eleifend, elit. Aenean auctor wisi et urna. Aliquam
-											erat volutpat. Duis ac turpis. </p>
-									</div>
-									<div class="section-content">
-										<div class="row">
-
-											<div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
-												<div class="m-b30 wt-icon-box-wraper">
-													<h2 class="text-primary m-b5 font-weight-800"><span
-															class="counter m-r5">406</span><b>+</b></h2>
-													<h5 class="wt-tilte m-b0 text-white">International Guests</h5>
-												</div>
-											</div>
-
-											<div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
-												<div class="m-b30  wt-icon-box-wraper">
-													<h2 class="text-primary m-b5 font-weight-800"><span
-															class="counter m-r5">132</span><b>+</b></h2>
-													<h5 class="wt-tilte m-b0 text-white">Five stars rating</h5>
-												</div>
-											</div>
-
-											<div class="col-md-4 col-sm-4 col-xs-4 col-xs-100pc">
-												<div class="m-b30 wt-icon-box-wraper">
-													<h2 class="text-primary m-b5 font-weight-800"><span
-															class="counter m-r5">207</span><b>+</b></h2>
-													<h5 class="wt-tilte m-b0 text-white">Served Breakfast</h5>
-												</div>
-											</div>
-
-										</div>
-									</div>
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="row no-col-gap">
-									<div class="col-md-6 col-sm-6 col-xs-6 col-xs-100pc">
-										<div
-											class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white  bgcall-block hover-box-effect">
-											<div class="icon-md text-primary">
-												<span class="icon-cell text-white"><i class="flaticon-hotel"></i></span>
-											</div>
-											<div class="icon-content text-white">
-												<h4 class="wt-tilte m-b10">Rooms</h4>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 col-xs-100pc">
-										<div
-											class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white  bgcall-block  hover-box-effect">
-											<div class="icon-md text-primary">
-												<span class="icon-cell text-white"><i
-														class="flaticon-coffee-cup"></i></span>
-											</div>
-											<div class="icon-content  text-white">
-												<h4 class="wt-tilte m-b10">Restaurant</h4>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6 col-sm-6 col-xs-6 col-xs-100pc">
-										<div
-											class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white  bgcall-block  hover-box-effect">
-											<div class="icon-md text-primary">
-												<span class="icon-cell text-white"><i
-														class="flaticon-cheers"></i></span>
-											</div>
-											<div class="icon-content  text-white">
-												<h4 class="wt-tilte m-b10">Luxury Bars</h4>
-											</div>
-										</div>
-									</div>
-									<div class="col-md-6  col-sm-6 col-xs-6 col-xs-100pc">
-										<div
-											class="wt-icon-box-wraper p-tb20 center bdr-1 bdr-solid bdr-white bgcall-block hover-box-effect">
-											<div class="icon-md text-primary">
-												<span class="icon-cell text-white"><i
-														class="flaticon-seats-at-the-hall"></i></span>
-											</div>
-											<div class="icon-content  text-white">
-												<h4 class="wt-tilte m-b10">Meeting Hall</h4>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- OUR SPECIALLIZATION END -->
-
+ 
 				<!-- OUR SERVICES START -->
 				<div class="section-full p-tb80">
 
@@ -1484,7 +1240,7 @@
 							</div>
 						</div>
 						<div class="text-center">
-							<a href="javascript:void(0);" class="btn-half site-button button-lg m-b15 m-t50">
+							<a href="#" class="btn-half site-button button-lg m-b15 m-t50">
 								<span>View All</span>
 								<em></em>
 							</a>
@@ -1493,128 +1249,7 @@
 				</div>
 				<!-- OUR SERVICES END -->
 
-				<!-- TESTIMONIALS SECTION START -->
-				<div class="section-full p-t80 p-b80  overlay-wraper" data-stellar-background-ratio="0.5"
-					style="background-image:url(images/background/bg-2.jpg);">
-					<div class="overlay-main opacity-05 bg-black"></div>
-
-					<div class="container">
-						<div class="section-content">
-
-							<!-- TITLE START -->
-							<div class="section-head text-left">
-								<h2 class="m-b5 text-white" data-title="Clients">Our Client Says</h2>
-								<div class="wt-separator-outer">
-									<div class="wt-separator bg-primary"></div>
-								</div>
-							</div>
-							<!-- TITLE END -->
-
-							<!-- TESTIMONIAL 4 START ON BACKGROUND -->
-							<div class="section-content">
-								<div class="testimonial-home owl-carousel  owl-btn-top-right">
-									<div class="item">
-										<div class="testimonial-6">
-											<div class="testimonial-pic-block">
-												<div class="testimonial-pic">
-													<img src="sharan/images/testimonials_pic1.jpg" width="132"
-														height="132" alt="">
-												</div>
-											</div>
-											<div class="testimonial-text clearfix text-white">
-												<div class="testimonial-detail ">
-													<h4 class="testimonial-name m-t0 m-b10">Andi Smith</h4>
-												</div>
-												<div class="testimonial-paragraph text-black p-t5">
-													<p>“Today we can tell you, thanks to your passion, hard work
-														creativity, and expertise, you delivered us the most beautiful
-														house great looks.</p>
-												</div>
-												<div class="testimonial-detail ">
-													<span class="testimonial-position">Newyork city</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="testimonial-6">
-											<div class="testimonial-pic-block">
-												<div class="testimonial-pic">
-													<img src="sharan/images/testimonials/pic2.jpg" width="132"
-														height="132" alt="">
-
-												</div>
-											</div>
-											<div class="testimonial-text clearfix text-white">
-												<div class="testimonial-detail ">
-													<h4 class="testimonial-name m-t0 m-b10">Poul Anderson</h4>
-												</div>
-												<div class="testimonial-paragraph text-black p-t5">
-													<p>“Today we can tell you, thanks to your passion, hard work
-														creativity, and expertise, you delivered us the most beautiful
-														house great looks.</p>
-												</div>
-												<div class="testimonial-detail ">
-													<span class="testimonial-position">Mexico city</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="testimonial-6">
-											<div class="testimonial-pic-block">
-												<div class="testimonial-pic">
-													<img src="sharan/images/testimonials/pic3.jpg" width="132"
-														height="132" alt="">
-
-												</div>
-											</div>
-											<div class="testimonial-text clearfix text-white">
-												<div class="testimonial-detail ">
-													<h4 class="testimonial-name m-t0 m-b10">Kayra gray</h4>
-												</div>
-												<div class="testimonial-paragraph text-black p-t5">
-													<p>“Today we can tell you, thanks to your passion, hard work
-														creativity, and expertise, you delivered us the most beautiful
-														house great looks.</p>
-												</div>
-												<div class="testimonial-detail ">
-													<span class="testimonial-position">Newyork city</span>
-												</div>
-											</div>
-										</div>
-									</div>
-									<div class="item">
-										<div class="testimonial-6">
-											<div class="testimonial-pic-block">
-												<div class="testimonial-pic">
-													<img src="sharan/images/testimonials/pic4.jpg" width="132"
-														height="132" alt="">
-
-												</div>
-											</div>
-											<div class="testimonial-text clearfix text-white">
-												<div class="testimonial-detail ">
-													<h4 class="testimonial-name m-t0 m-b10">Anna Smith</h4>
-												</div>
-												<div class="testimonial-paragraph text-black p-t5">
-													<p>“Today we can tell you, thanks to your passion, hard work
-														creativity, and expertise, you delivered us the most beautiful
-														house great looks.</p>
-												</div>
-												<div class="testimonial-detail ">
-													<span class="testimonial-position">Newyork city</span>
-												</div>
-											</div>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!-- TESTIMONIALS SECTION END -->
-
+			 
 				<!-- OUR TEAM START -->
 				<div class="section-full p-t80 p-b80 bg-white">
 					<div class="container">
@@ -1639,11 +1274,11 @@
 											<div class="team-social-center">
 												<ul class="team-social-icon">
 													<li>
-														<a href="javascript:void(0);" class="fa fa-facebook"></a>
+														<a href="#" class="fa fa-facebook"></a>
 													</li>
 
 													<li>
-														<a href="javascript:void(0);" class="fa fa-instagram"></a>
+														<a href="#" class="fa fa-instagram"></a>
 													</li>
 												</ul>
 											</div>
@@ -1667,11 +1302,11 @@
 											<div class="team-social-center">
 												<ul class="team-social-icon">
 													<li>
-														<a href="javascript:void(0);" class="fa fa-facebook"></a>
+														<a href="#" class="fa fa-facebook"></a>
 													</li>
 
 													<li>
-														<a href="javascript:void(0);" class="fa fa-instagram"></a>
+														<a href="#" class="fa fa-instagram"></a>
 													</li>
 												</ul>
 											</div>
@@ -1696,11 +1331,11 @@
 											<div class="team-social-center">
 												<ul class="team-social-icon">
 													<li>
-														<a href="javascript:void(0);" class="fa fa-facebook"></a>
+														<a href="#" class="fa fa-facebook"></a>
 													</li>
 
 													<li>
-														<a href="javascript:void(0);" class="fa fa-instagram"></a>
+														<a href="#" class="fa fa-instagram"></a>
 													</li>
 												</ul>
 											</div>
@@ -1743,36 +1378,7 @@
 					<div class="overlay-main"></div>
 					<div class="container">
 
-						<div class="news-letter-footer">
-							<div class="row">
-								<div class="col-md-6 col-sm-6">
-									<div class="newsletter-f-left">
-										<h4 class="text-uppercase m-t0 m-b10">Subscribe to our newsletter!</h4>
-										<p>Never Miss Anything about us .
-										</p>
-									</div>
-								</div>
-								<div class="col-md-6 col-sm-6">
-									<div class="newsletter-f-right text-center">
-										<form role="search" method="post">
-											<div class="input-group">
-												<input name="news-letter" class="form-control"
-													placeholder="ENTER YOUR EMAIL" type="text">
-												<span class="input-group-btn">
-													<button type="submit" class="btn-half site-button button-lg">
-														<span>Submit</span>
-														<em></em>
-													</button>
-												</span>
-											</div>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="m-b10">
-							<div class="wt-divider bg-gray-dark"></div>
-						</div>
+					
 						<div class="row">
 							<!-- ABOUT COMPANY -->
 							<div class="col-lg-3 col-md-6 col-sm-6">
@@ -1785,23 +1391,23 @@
 
 									<ul class="social-icons social-tooltips-outer  wt-social-links">
 										<li>
-											<a href="javascript:void(0);" class="fa fa-facebook">
+											<a href="#" class="fa fa-facebook">
 												<span class="social-tooltips">Facebook</span>
 											</a>
 										</li>
 
 										<li>
-											<a href="javascript:void(0);" class="fa fa-linkedin">
+											<a href="#" class="fa fa-linkedin">
 												<span class="social-tooltips">Linkedin</span>
 											</a>
 										</li>
 										<li>
-											<a href="javascript:void(0);" class="fa fa-google-plus">
+											<a href="#" class="fa fa-google-plus">
 												<span class="social-tooltips">Google Plus</span>
 											</a>
 										</li>
 										<li>
-											<a href="javascript:void(0);" class="fa fa-instagram">
+											<a href="#" class="fa fa-instagram">
 												<span class="social-tooltips">Instagram</span>
 											</a>
 										</li>
@@ -1828,19 +1434,6 @@
 										<li><a href="post-gallery.html">Reservation</a></li>
 										<li><a href="post-gallery.html">Gallery</a></li>
 										<li><a href="project-detail.html">Contact</a></li>
-									</ul>
-								</div>
-							</div>
-
-
-							<div class="col-lg-3 col-md-6 col-sm-6">
-								<div class="widget widget_services inline-links">
-									<h4 class="widget-title"></h4>
-									<ul>
-										<li><a href="about-1.html"></a></li>
-										<li><a href="post-gallery.html"></a></li>
-										<li><a href="post-gallery.html"></a></li>
-										<li><a href="project-detail.html"></a></li>
 									</ul>
 								</div>
 							</div>

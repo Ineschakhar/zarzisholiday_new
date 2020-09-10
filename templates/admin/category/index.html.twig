@@ -28,10 +28,10 @@
 						<ol class="breadcrumb page-breadcrumb pull-right">
 							<li>
 								<i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-									href="index.html">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
+									href="{{ path('admin') }}">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
 							</li>
 							<li>
-								<a class="parent-item" href="">Category</a>&nbsp;<i class="fa fa-angle-right"></i>
+								<a class="parent-item" href="#">Category</a>&nbsp;<i class="fa fa-angle-right"></i>
 							</li>
 							<li class="active">All Categories</li>
 						</ol>
@@ -42,11 +42,12 @@
 						<div class="card card-box">
 							<div class="card-head">
 								<header>All Bookings</header>
-								<div class="tools">
-									<a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
-									<a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
-									<a class="t-close btn-color fa fa-times" href="javascript:;"></a>
-								</div>
+<div class="tools">
+	<a class="fa fa-repeat btn-color box-refresh" href="javascript:;"></a>
+	<a class="t-collapse btn-color fa fa-chevron-down" href="javascript:;"></a>
+	<a class="t-close btn-color fa fa-times" href="javascript:;"></a>
+</div>
+
 							</div>
 							<div class="card-body ">
 								<div class="row p-b-20">
@@ -69,19 +70,19 @@
 											</a>
 											<ul class="dropdown-menu pull-right">
 												<li>
-													<a href="javascript:;">
+													<a href="#">
 														<i class="fa fa-print"></i>
 														Print
 													</a>
 												</li>
 												<li>
-													<a href="javascript:;">
+													<a href="#">
 														<i class="fa fa-file-pdf-o"></i>
 														Save as PDF
 													</a>
 												</li>
 												<li>
-													<a href="javascript:;">
+													<a href="#">
 														<i class="fa fa-file-excel-o"></i>
 														Export to Excel
 													</a>
@@ -154,7 +155,7 @@
 
 												</td>
 												<td class="center">
-													<a href="tel:4444565756">
+													<a href="#">
 														<img src="{{ asset('uploads/' ~ category.image) }}" height="40">
 
 													</a>

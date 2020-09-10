@@ -27,6 +27,8 @@ security:
             form_login:
                 login_path: login
                 check_path: login
+                default_target_path: home
+
 
             # https://symfony.com/doc/current/security/form_login_setup.html
             # activate different ways to authenticate
@@ -38,9 +40,9 @@ security:
     # Easy way to control access for large sections of your site
     # Note: Only the *first* access control that matches will be used
     access_control:
-    #    - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
-    #    - { path: ^/inscription, roles: IS_AUTHENTICATED_ANONYMOUSLY } 
-    #    - { path: ^/dashboard, roles: [ROLE_ADMIN] } 
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/inscription, roles: IS_AUTHENTICATED_ANONYMOUSLY } 
+        - { path: ^/dashboard, roles: [ROLE_ADMIN] } 
     #   - { path: ^/reservation, roles: [ROLE_USER], [ROLE_ADMIN] }
     
 

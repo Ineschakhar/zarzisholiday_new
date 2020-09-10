@@ -32,7 +32,7 @@
             background-color: #ffffff;
         }
     </style>
-    <div class="container ">
+<div class="container-fluid center-block" style="margin-top: 100px">
         <fieldset class="border col-md-6" >
             <legend class="col-md-6"> Please enter the following :</legend>
             <form class="box" action="{{ path('login') }}" method="post">
@@ -58,8 +58,14 @@
                 {#   <input type="hidden" name="_target_path" value="{{ path('admin-index') }}">#}
                 {#  {% endif %}#}
 
-                <button class="btn btn-success" type="submit" value="Login" > Login</button>
-                <a href="{{ path('inscription') }}" class="btn btn-primary">Register Now</a>
+<button class="btn btn-success" style="border: none;
+background-color:#262423;" type="submit" value="Login">
+	Login</button>
+
+<a href="{{ path('inscription') }}" style="border: none;
+background-color:#c19b76;" class="btn btn-primary">Register Now</a>
+
+
             </form>
         </fieldset>
     </div>

@@ -236,343 +236,273 @@
         <div class="page-content">
 
             <!-- INNER PAGE BANNER -->
-            <div class="wt-bnr-inr overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5"
+            <div class="overlay-wraper bg-parallax bg-top-center" data-stellar-background-ratio="0.5"
                 style=" background-image:url(zarzis/images/ff.jpg);">
-<div class="overlay-main bg-black opacity-07" style="background-color:#ab845e;height:300px"></div>
+                <div class="overlay-main bg-black opacity-07" style="background-color:#ab845e;height:80px"></div>
 
 
                 <div class="container">
                     <div class="wt-bnr-inr-entry">
                         <div class="banner-title-outer">
-                            <div class="banner-title-name" >
-<h2 class="text-white  font-50 font-weight-500" style="text-align:left;">{{appartement.price}}
-
-                                    € /per night</h2>
+                            <div class="banner-title-name">
+                                
                             </div>
-                        </div> 
+                        </div>
                     </div>
                 </div>
             </div>
+
+
             <!-- INNER PAGE BANNER END -->
 
-            <!-- SECTION CONTENT START --> 
+            <!-- SECTION CONTENT START -->
 
-                <!-- LOCATION BLOCK-->
-                <div class="container">
+            <!-- LOCATION BLOCK-->
+            <div class="container">
 
 
-                    <!-- SECTION CONTENT START -->
-                    <div class="section-full p-tb90 square_shape1 square_shape3">
-                        <div class="container">
-<div class="text-left section-head">
+                <!-- SECTION CONTENT START -->
+                <div class="section-full p-tb90 square_shape1 square_shape3">
+                    <div class="container">
+                        <div class="text-left section-head">
+
 <h2 class="m-b5">{{ appartement.title }}</h2>
-	<div class="wt-separator-outer">
-		<div class="wt-separator bg-primary"></div>
-	</div>
+<h2 class="text-black  font-50 font-weight-500" style="text-align:left;">
+	{{appartement.price}}
+
+	€ /per night</h2>
+
+                            <div class="wt-separator-outer">
+                                <div class="wt-separator bg-primary"></div>
+                            </div>
+                        </div>
+
+
+
+
+
+
+                        <!-- BLOG START -->
+                        <div class="blog-post date-style-1 blog-detail text-black">
+                            <div class="wt-post-media">
+                                <!--Fade slider-->
+                                <div
+                                    class="owl-carousel owl-fade-slider-one owl-btn-vertical-center owl-dots-bottom-right m-b30">
+
+                                    <div class="item">
+                                        <div class="wt-thum-bx">
+                                            <img src="{{ asset('uploads/' ~ appartement.image) }}"
+                                                style="height: 500px; "></div>
+
+
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="wt-thum-bx">
+                                            <img src="{{ asset('uploads/' ~ appartement.image) }}"
+                                                style="height: 500px; "></div>
+
+
+
+                                    </div>
+
+                                    <div class="item">
+                                        <div class="wt-thum-bx">
+                                            <img src="{{ asset('uploads/' ~ appartement.image) }}"
+                                                style="height: 500px; "></div>
+
+
+                                    </div>
+
+                                </div>
+                                <!--fade slider END-->
+                            </div>
+
+                            <div class="wt-post-meta ">
+                                <ul>
+                                    <li class="post-date"><i class="fa fa-calendar"></i><strong>20 Feb</strong>
+                                        <span> 2019</span> </li>
+                                    <li class="post-author"><i class="fa fa-user"></i><a href="javascript:void(0);">By
+                                            <span>Admin</span></a> </li>
+                                    <li class="post-comment"><i class="fa fa-comment"></i><a
+                                            href="javascript:void(0);">21 <span>Comment</span></a>
+
+                                    </li>
+                                </ul>
+                            </div>
+ 
+
+                            <form action="{{ path('user_reservation_new',{'rid': appartement.id}) }}"
+                                style="text-align:center;" method="post">
+
+                                Days
+                                <input type="number" id="days" name="days" value="1" style="width: 30px">
+                                Checkin Date :<input type="date" id="checkin" name="checkin" style="width: 140px"
+                                    required>
+                                <input type="submit" value="Reserve "
+                                    class="btn btn-success site-button-secondry btn-half">
+                            </form>
+ 
+                    <div class="col-md-12">
+                        <div class="m-b50">
+                            <!-- TITLE START -->
+                            <div class="section-head">
+                                <h2 class=" m-b5">Details</h2>
+                                <div class="wt-separator-outer">
+                                    <div class="wt-separator bg-primary"></div>
+                                </div>
+                            </div>
+                            <!-- TITLE END -->
+
+                            <!-- TAB DEFAULT WITH NAV BG -->
+                            <div class="section-content">
+                                <div class="wt-tabs bg-tabs">
+                                    <ul class="nav nav-tabs">
+                                        <li class="active">
+                                            <a data-toggle="tab" href="#web-design-13">Description</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#graphic-design-13">Service</a>
+                                        </li>
+                                        <li>
+                                            <a data-toggle="tab" href="#developement-13">Composition</a>
+</li>
+<li>
+	<a data-toggle="tab" href="#developement-13">simelar appartments</a>
+</li>
+
+                                    </ul>
+                                    <div class="tab-content">
+
+                                        <div id="web-design-13" class="tab-pane active">
+                                            <p class="m-b0">
+                                                <strong>Web design lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                    elit.</strong><br>
+                                                Suspendisse et justo.
+                                                Praesent mattis commyolk augue Aliquam ornare hendrerit augue Cras
+                                                tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet.
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                                justo. Praesent mattis
+                                                commyolk augue aliquam ornare augue.</p>
+                                        </div>
+
+                                        <div id="graphic-design-13" class="tab-pane">
+                                            <p class="m-b0">
+                                                <strong>Graphic Design lorem ipsum dolor sit amet, consectetuer
+                                                    adipiscing elit.</strong><br>
+                                                Praesent Suspendisse
+                                                et justo. mattis commyolk augue Aliquam ornare hendrerit augue Cras
+                                                tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet.
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                                justo. Praesent mattis
+                                                commyolk augue aliquam ornare augue.</p>
+                                        </div>
+
+                                        <div id="developement-13" class="tab-pane">
+                                            <p class="m-b0">
+                                                <strong>Developement lorem ipsum dolor sit amet, consectetuer adipiscing
+                                                    elit.</strong><br>Commyolk Suspendisse
+                                                et justo. Praesent mattis augue Aliquam ornare hendrerit augue Cras
+                                                tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet.
+                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+                                                justo. Praesent mattis
+                                                commyolk augue aliquam ornare augue.</p>
+                                        </div>
+<div id="developement-13" class="tab-pane">
+	<p class="m-b0">
+		<strong>Developement lorem ipsum dolor sit amet, consectetuer adipiscing
+			                                                    elit.</strong><br>Commyolk Suspendisse
+			                                                et justo. Praesent mattis augue Aliquam ornare hendrerit augue Cras
+			                                                tellus In pulvinar lectus a est Curabitur eget orci Cras laoreet.
+			                                                Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Suspendisse et
+			                                                justo. Praesent mattis
+			                                                commyolk augue aliquam ornare augue.</p>
 </div>
 
-
- 
-
-
-
-                            <!-- BLOG START -->
-                            <div class="blog-post date-style-1 blog-detail text-black">
-                                <div class="wt-post-media">
-                                    <!--Fade slider-->
-                                    <div
-                                        class="owl-carousel owl-fade-slider-one owl-btn-vertical-center owl-dots-bottom-right m-b30">
-
-                                        <div class="item">
-                                            <div class="wt-thum-bx">
-                                                <img src="{{ asset('uploads/' ~ appartement.image) }}"
-                                                    style="height: 500px; "></div>
-
-
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="wt-thum-bx">
-                                                <img src="{{ asset('uploads/' ~ appartement.image) }}"
-                                                    style="height: 500px; "></div>
-
-
-
-                                        </div>
-
-                                        <div class="item">
-                                            <div class="wt-thum-bx">
-                                                <img src="{{ asset('uploads/' ~ appartement.image) }}"
-                                                    style="height: 500px; "></div>
-
-
-                                        </div>
-
-                                    </div>
-                                    <!--fade slider END-->
-                                </div>
-
-                                <div class="wt-post-meta ">
-                                    <ul>
-                                        <li class="post-date"><i class="fa fa-calendar"></i><strong>20 Feb</strong>
-                                            <span> 2019</span> </li>
-                                        <li class="post-author"><i class="fa fa-user"></i><a
-                                                href="javascript:void(0);">By <span>Admin</span></a> </li>
-                                        <li class="post-comment"><i class="fa fa-comment"></i><a
-                                                href="javascript:void(0);">21 <span>Comment</span></a> 
-                                                
-</li>                      </ul>
-                                </div>
-
-                                <div class="wt-post-title ">
-                                    <h3 class="post-title">{{ appartement.title }}</h3>
-
-                                </div>
-                                
-<form action="{{ path('user_reservation_new',{'rid': appartement.id}) }}"style="text-align:center;" method="post">
-
-	Days
-	<input type="number" id="days" name="days" value="1" style="width: 30px">
-	Checkin Date :<input type="date" id="checkin" name="checkin" style="width: 140px" required>
-	<input type="submit" value="Reserve " class="btn btn-success site-button-secondry btn-half" >
-</form> 
- 
-		  
-                                <div class="wt-post-info">
-                                    <p> Proin tincidunt tellus ac porta volutpat. Cras mattis congue lacus id bibendum.
-                                        Mauris ut sodales libero. Maecenas feugiat sit amet enim in accumsan. Here,
-                                        then, is what I wanted to tell you of my architecture. I created it with courage
-                                        and idealism, but also with an awareness of the fact that what is important is
-                                        life, friends, and attempting to make this unjust world a better place in which
-                                        to live.</p>
-                                </div>
-
-                                <div class="row m-b20 wt-post-info text-justify">
-                                    <div class="col-md-7">
-                                        <p>Duis vestibulum quis quam vel accumsan. Nunc a vulputate lectus. Vestibulum
-                                            eleifend nisl sed massa sagittis vestibulum. Vestibulum pretium blandit
-                                            tellus, sodales volutpat sapien varius vel. Phasellus tristique cursus erat,
-                                            a placerat tellus laoreet eget. Fusce vitae dui sit amet lacus rutrum
-                                            convallis. Vivamus sit amet lectus venenatis est rhoncus interdum a vitae
-                                            velit.Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-                                            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim
-                                            veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea
-                                            commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
-                                            esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
-                                            cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id
-                                            est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab
-                                            illo inventore veritatis et quasi architecto beatae vitae ipsa quae ab illo
-                                            inventore dicta sunt explicabo.
-                                        </p>
-
-                                    </div>
-                                    <div class="col-md-5">
-                                        <div class="wt-box">
-                                            <div class="wt-media">
-                                                <img src="{{ asset('uploads/' ~ appartement.image) }}" height="80">
-                                            </div>
-
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div class="wt-post-text">
-                                    <blockquote class="font-weight-500">
-                                        <p>Architecture is basically a container of something. I hope they will enjoy
-                                            not so much the teacup, but the tea.</p>
-                                        <div class="p-t15 text-uppercase">
-                                            <strong>Yoshio Taniguchi</strong>
-                                            <span>Envato Author</span>
-                                        </div>
-
-                                    </blockquote>
-
-                                    <p>Duis vestibulum quis quam vel accumsan. Nunc a vulputate lectus. Vestibulum
-                                        eleifend nisl sed massa sagittis vestibulum. Vestibulum pretium blandit tellus,
-                                        sodales volutpat sapien varius vel. Phasellus tristique cursus erat, a placerat
-                                        tellus laoreet eget. Fusce vitae dui sit amet lacus rutrum convallis. Vivamus
-                                        sit amet lectus venenatis est rhoncus interdum a vitae velit.Lorem ipsum dolor
-                                        sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                                        labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud
-                                        exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                                        irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-                                        nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa
-                                        qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis
-                                        iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-                                        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae
-                                        vitae ipsa quae ab illo inventore dicta sunt explicabo.
-                                    </p>
-
-
-                                </div>
-                            </div>
-
-                            <div class="section-content">
-                                <!-- TITLE START -->
-                                <div class="text-left section-head">
-                                    <h2 class="m-b5">Related Post</h2>
-                                    <div class="wt-separator-outer">
-                                        <div class="wt-separator bg-primary"></div>
-                                    </div>
-                                </div>
-                                <!-- TITLE END -->
-                                <!-- CAROUSEL -->
-                                <div class="section-content">
-                                    <div class="row">
-
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="blog-post latest-blog-1 date-style-2">
-                                                <div class="wt-post-media wt-img-effect zoom-slow">
-                                                    <a href="javascript:;"><img src="images/blog/default/thum4.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="wt-post-info">
-                                                    <div class="post-date"> <strong>20 Mar 2019 </strong></div>
-
-                                                    <div class="wt-post-meta">
-                                                        <ul class="clearfix">
-                                                            <li class="post-author">
-                                                                <div class="post-author-pic">
-                                                                    <span><img src="images/testimonials/pic1.jpg"
-                                                                            alt=""></span>
-                                                                    <span><strong> By</strong> <a
-                                                                            href="javascript:;">Loretta
-                                                                            Shelton</a></span>
-                                                                </div>
-                                                            </li>
-                                                            <li class="post-comment"><i
-                                                                    class="fa fa fa-comments text-primary"></i><a
-                                                                    href="javascript:;">10 Comment</a> </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="wt-post-title">
-                                                        <h3 class="post-title"><a href="javascript:;">Your first source
-                                                                for architecture, dsign and art news.</a></h3>
-                                                    </div>
-
-                                                    <div class="wt-post-text">
-                                                        <p>Asperiores, tenetur, blanditiis, quaerat odit ex
-                                                            exercitationem pariatur quibusd veritatis quisquam
-                                                            laboriosam asperiores, tenetur, blanditiis,quaerat odit ex
-                                                            exercitationem pariatur.</p>
-                                                    </div>
-
-                                                    <div class="readmore-line">
-                                                        <a href="javascript:;"
-                                                            class="site-button-ink text-primary font-weight-900 ">Read
-                                                            More</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
-
-                                        <div class="col-md-6 col-sm-6">
-                                            <div class="blog-post latest-blog-1 date-style-2">
-                                                <div class="wt-post-media wt-img-effect zoom-slow">
-                                                    <a href="javascript:;"><img src="images/blog/default/thum7.jpg"
-                                                            alt=""></a>
-                                                </div>
-                                                <div class="wt-post-info">
-                                                    <div class="post-date"> <strong>20 Mar 2019 </strong></div>
-
-                                                    <div class="wt-post-meta">
-                                                        <ul class="clearfix">
-                                                            <li class="post-author">
-                                                                <div class="post-author-pic">
-                                                                    <span><img src="images/testimonials/pic2.jpg"
-                                                                            alt=""></span>
-                                                                    <span><strong> By</strong> <a
-                                                                            href="javascript:;">Loretta
-                                                                            Shelton</a></span>
-                                                                </div>
-                                                            </li>
-                                                            <li class="post-comment"><i
-                                                                    class="fa fa fa-comments text-primary"></i><a
-                                                                    href="javascript:;">10 Comment</a> </li>
-                                                        </ul>
-                                                    </div>
-
-                                                    <div class="wt-post-title">
-                                                        <h3 class="post-title"><a href="javascript:;">Your first source
-                                                                for architecture, dsign and art news.</a></h3>
-                                                    </div>
-
-                                                    <div class="wt-post-text">
-                                                        <p>Asperiores, tenetur, blanditiis, quaerat odit ex
-                                                            exercitationem pariatur quibusd veritatis quisquam
-                                                            laboriosam asperiores, tenetur, blanditiis,quaerat odit ex
-                                                            exercitationem pariatur.</p>
-                                                    </div>
-
-                                                    <div class="readmore-line">
-                                                        <a href="javascript:;"
-                                                            class="site-button-ink text-primary font-weight-900 ">Read
-                                                            More</a>
-                                                    </div>
-
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                    </div>
 
-                            <div class="clear" id="comment-list">
-                                <div class="comments-area" id="comments">
-                                    <h2 class="comments-title">4 Comments</h2>
-                                    <div class="p-tb30">
-                                        <!-- COMMENT LIST START -->
-                                        <ol class="comment-list p-a30 bg-gray">
-                                            <li class="comment">
-                                                <!-- COMMENT BLOCK -->
+
+                    <div class="clear" id="comment-list">
+                        <div class="comments-area" id="comments">
+                            <h2 class="comments-title">4 Comments</h2>
+                            <div class="p-tb30">
+                                <!-- COMMENT LIST START -->
+                                <ol class="comment-list p-a30 bg-gray">
+                                    <li class="comment">
+                                        <!-- COMMENT BLOCK -->
+                                        <div class="comment-body">
+                                            <div class="comment-meta">
+                                                <a href="javascript:void(0);">March 6, 2019 at 7:15 am</a>
+                                            </div>
+                                            <div class="comment-author vcard">
+                                                <img class="avatar photo" src="images/testimonials/pic1.jpg" alt="">
+                                                <cite class="fn">Diego</cite>
+                                                <span class="says">says:</span>
+                                            </div>
+
+                                            <p>Sit amet nibh vulputate cursus a sit amet mauris lorem ipsum
+                                                dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit
+                                                auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
+                                                nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
+                                                sed odio http://themeforest.net Morbi accumsan ipsum velit. Nam
+                                                nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
+                                                vitae erat </p>
+                                            <div class="reply">
+                                                <a href="javscript:;"
+                                                    class="comment-reply-link letter-spacing-2 text-uppercase">Read
+                                                    More</a>
+                                            </div>
+                                        </div>
+                                        <!-- SUB COMMENT BLOCK -->
+                                        <ol class="children">
+                                            <li class="comment odd parent">
+
                                                 <div class="comment-body">
                                                     <div class="comment-meta">
-                                                        <a href="javascript:void(0);">March 6, 2019 at 7:15 am</a>
+                                                        <a href="javascript:void(0);">March 8, 2019 at 9:15
+                                                            am</a>
                                                     </div>
                                                     <div class="comment-author vcard">
-                                                        <img class="avatar photo" src="images/testimonials/pic1.jpg"
+                                                        <img class="avatar photo" src="images/testimonials/pic3.jpg"
                                                             alt="">
-                                                        <cite class="fn">Diego</cite>
+                                                        <cite class="fn">Brayden</cite>
                                                         <span class="says">says:</span>
                                                     </div>
 
-                                                    <p>Sit amet nibh vulputate cursus a sit amet mauris lorem ipsum
-                                                        dolor sit amet of Lorem Ipsum. Proin gravida nibh vel velit
-                                                        auctor aliquet. Aenean sollicitudin, lorem quis bibendum auctor,
-                                                        nisi elit consequat ipsum, nec sagittis sem nibh id elit. Duis
-                                                        sed odio http://themeforest.net Morbi accumsan ipsum velit. Nam
-                                                        nec tellus a odio tincidunt auctor a ornare odio. Sed non mauris
-                                                        vitae erat </p>
+                                                    <p>Asperiores, tenetur, blanditiis, quaerat odit ex
+                                                        exercitationem pariatur quibusdam veritatis quisquam
+                                                        laboriosam esse beatae hic perferendis velit deserunt
+                                                        soluta iste repellendus officia in neque veniam debitis
+                                                    </p>
                                                     <div class="reply">
                                                         <a href="javscript:;"
                                                             class="comment-reply-link letter-spacing-2 text-uppercase">Read
                                                             More</a>
                                                     </div>
+
                                                 </div>
-                                                <!-- SUB COMMENT BLOCK -->
+
                                                 <ol class="children">
                                                     <li class="comment odd parent">
-
                                                         <div class="comment-body">
                                                             <div class="comment-meta">
-                                                                <a href="javascript:void(0);">March 8, 2019 at 9:15
-                                                                    am</a>
+                                                                <a href="javascript:void(0);">March 9, 2019 at
+                                                                    11:15 am</a>
                                                             </div>
                                                             <div class="comment-author vcard">
                                                                 <img class="avatar photo"
-                                                                    src="images/testimonials/pic3.jpg" alt="">
-                                                                <cite class="fn">Brayden</cite>
+                                                                    src="images/testimonials/pic2.jpg" alt="">
+                                                                <cite class="fn">Diego</cite>
                                                                 <span class="says">says:</span>
                                                             </div>
 
-                                                            <p>Asperiores, tenetur, blanditiis, quaerat odit ex
-                                                                exercitationem pariatur quibusdam veritatis quisquam
-                                                                laboriosam esse beatae hic perferendis velit deserunt
-                                                                soluta iste repellendus officia in neque veniam debitis
-                                                            </p>
+                                                            <p>Vel velit auctor aliquet. Aenean sollicitudin,
+                                                                lorem quis bibendum auctor Lorem ipsum dolor sit
+                                                                amet of Lorem Ipsum. Proin gravida nibh..</p>
                                                             <div class="reply">
                                                                 <a href="javscript:;"
                                                                     class="comment-reply-link letter-spacing-2 text-uppercase">Read
@@ -580,285 +510,266 @@
                                                             </div>
 
                                                         </div>
-
-                                                        <ol class="children">
-                                                            <li class="comment odd parent">
-                                                                <div class="comment-body">
-                                                                    <div class="comment-meta">
-                                                                        <a href="javascript:void(0);">March 9, 2019 at
-                                                                            11:15 am</a>
-                                                                    </div>
-                                                                    <div class="comment-author vcard">
-                                                                        <img class="avatar photo"
-                                                                            src="images/testimonials/pic2.jpg" alt="">
-                                                                        <cite class="fn">Diego</cite>
-                                                                        <span class="says">says:</span>
-                                                                    </div>
-
-                                                                    <p>Vel velit auctor aliquet. Aenean sollicitudin,
-                                                                        lorem quis bibendum auctor Lorem ipsum dolor sit
-                                                                        amet of Lorem Ipsum. Proin gravida nibh..</p>
-                                                                    <div class="reply">
-                                                                        <a href="javscript:;"
-                                                                            class="comment-reply-link letter-spacing-2 text-uppercase">Read
-                                                                            More</a>
-                                                                    </div>
-
-                                                                </div>
-                                                            </li>
-                                                        </ol>
-
                                                     </li>
                                                 </ol>
-                                            </li>
-                                            <li class="comment">
-                                                <!-- COMMENT BLOCK -->
-                                                <div class="comment-body">
-                                                    <div class="comment-meta">
-                                                        <a href="javascript:void(0);">March 12, 2019 at 7:15 am</a>
-                                                    </div>
-                                                    <div class="comment-author vcard">
-                                                        <img class="avatar photo" src="images/testimonials/pic1.jpg"
-                                                            alt="">
-                                                        <cite class="fn">Stacy poe</cite>
-                                                        <span class="says">says:</span>
-                                                    </div>
 
-                                                    <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem
-                                                        pariatur quibusdam veritatis quisquam laboriosam esse beatae hic
-                                                        perferendis velit deserunt soluta iste repellendus officia in
-                                                        neque veniam debitis</p>
-                                                    <div class="reply">
-                                                        <a href="javscript:;"
-                                                            class="comment-reply-link letter-spacing-2 text-uppercase">Read
-                                                            More</a>
-                                                    </div>
-                                                </div>
                                             </li>
                                         </ol>
-                                        <!-- COMMENT LIST END -->
+                                    </li>
+                                    <li class="comment">
+                                        <!-- COMMENT BLOCK -->
+                                        <div class="comment-body">
+                                            <div class="comment-meta">
+                                                <a href="javascript:void(0);">March 12, 2019 at 7:15 am</a>
+                                            </div>
+                                            <div class="comment-author vcard">
+                                                <img class="avatar photo" src="images/testimonials/pic1.jpg" alt="">
+                                                <cite class="fn">Stacy poe</cite>
+                                                <span class="says">says:</span>
+                                            </div>
 
-                                        <!-- LEAVE A REPLY START -->
-                                        <div class="comment-respond m-t30" id="respond">
-
-                                            <h2 class="comment-reply-title" id="reply-title">Leave a Comments
-                                                <small>
-                                                    <a style="display:none;" href="#" id="cancel-comment-reply-link"
-                                                        rel="nofollow">Cancel reply</a>
-                                                </small>
-</h2>
-{% if app.user %}
-	<h4>Write your comment
-	</h4>
-	{{ include('messages.html.twig') }}
-
-
-<form class="comment-form" id="commentform" method="post" name="comment" action="{{ path('user_new_comment', {'id': appartement.id}) }}" role="form">
-
-
-                                                <p class="comment-form-author">
-                                                    <label for="author">Subject <span class="required">*</span></label>
-                                                    <input class="form-control" type="text"     id="comment_subject" name="comment[subject]" maxlength="75" placeholder="Subject" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject" >
-                                                    <div class="validation"></div> 
-                                                </p>
-
-                                                <p class="comment-form-email">
-                                                    <label for="email">Email <span class="required">*</span></label>
-                                                    <input class="form-control" type="text" value="" name="email"
-                                                        placeholder="Email" id="email">
-                                                        <div class="validation"></div>
-                                                </p> 
-
-                                                <p class="comment-form-comment">
-                                                    <label for="comment">Comment</label>
-                                                    <textarea class="form-control" placeholder="Comment"  id="comment_comment" name="comment[comment]" maxlength="255" rows="5" data-rule="required" data-msg="Please write something for us" ></textarea>
-
-                                                        <div class="validation"></div>
-                                                </p>
-
-                                                 
-<button class="site-button radius-no text-uppercase font-weight-600" type="submit">Submit</button>
-
-                                                
-
-                                            </form>
-{% else %}
-<li>
-	<a href="/login">
-		<i class="icon-envelope-alt"></i>
-		If you want to add comment please login</a>
-</li>{% endif %}
-
-
+                                            <p>Asperiores, tenetur, blanditiis, quaerat odit ex exercitationem
+                                                pariatur quibusdam veritatis quisquam laboriosam esse beatae hic
+                                                perferendis velit deserunt soluta iste repellendus officia in
+                                                neque veniam debitis</p>
+                                            <div class="reply">
+                                                <a href="javscript:;"
+                                                    class="comment-reply-link letter-spacing-2 text-uppercase">Read
+                                                    More</a>
+                                            </div>
                                         </div>
-                                        <!-- LEAVE A REPLY END -->
-                                    </div>
-                                </div>
-                            </div>
-                            <!-- BLOG END -->
+                                    </li>
+                                </ol>
+                                <!-- COMMENT LIST END -->
 
-                        </div> 
-                    <!-- SECTION CONTENT END -->
-                </div>
-            </div>
+                                <!-- LEAVE A REPLY START -->
+                                <div class="comment-respond m-t30" id="respond">
 
-            <!-- SECTION CONTENT END -->
+                                    <h2 class="comment-reply-title" id="reply-title">Leave a Comments
+                                        <small>
+                                            <a style="display:none;" href="#" id="cancel-comment-reply-link"
+                                                rel="nofollow">Cancel reply</a>
+                                        </small>
+                                    </h2>
+                                    {% if app.user %}
+                                    <h4>Write your comment
+                                    </h4>
+                                    {{ include('messages.html.twig') }}
 
-        </div>
-        <!-- CONTENT END -->
-        <!-- FOOTER START -->
-        <footer class="site-footer footer-large footer-dark	footer-wide">
 
-            <!-- FOOTER BLOCKES START -->
-            <div class="footer-top overlay-wraper">
-                <div class="overlay-main"></div>
-                <div class="container">
+                                    <form class="comment-form" id="commentform" method="post" name="comment"
+                                        action="{{ path('user_new_comment', {'id': appartement.id}) }}" role="form">
 
-                    <div class="news-letter-footer">
-                        <div class="row">
-                            <div class="col-md-6 col-sm-6">
-                                <div class="newsletter-f-left">
-                                    <h4 class="text-uppercase m-t0 m-b10">Subscribe to our newsletter!</h4>
-                                    <p>Never Miss Anything about us .
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="col-md-6 col-sm-6">
-                                <div class="newsletter-f-right text-center">
-                                    <form role="search" method="post">
-                                        <div class="input-group">
-                                            <input name="news-letter" class="form-control"
-                                                placeholder="ENTER YOUR EMAIL" type="text">
-                                            <span class="input-group-btn">
-                                                <button type="submit" class="btn-half site-button button-lg">
-                                                    <span>Submit</span>
-                                                    <em></em>
-                                                </button>
-                                            </span>
-                                        </div>
+
+                                        <p class="comment-form-author">
+                                            <label for="author">Subject <span class="required">*</span></label>
+                                            <input class="form-control" type="text" id="comment_subject"
+                                                name="comment[subject]" maxlength="75" placeholder="Subject"
+                                                data-rule="minlen:4"
+                                                data-msg="Please enter at least 8 chars of subject">
+                                            <div class="validation"></div>
+                                        </p>
+
+                                        <p class="comment-form-email">
+                                            <label for="email">Email <span class="required">*</span></label>
+                                            <input class="form-control" type="text" value="" name="email"
+                                                placeholder="Email" id="email">
+                                            <div class="validation"></div>
+                                        </p>
+
+                                        <p class="comment-form-comment">
+                                            <label for="comment">Comment</label>
+                                            <textarea class="form-control" placeholder="Comment" id="comment_comment"
+                                                name="comment[comment]" maxlength="255" rows="5" data-rule="required"
+                                                data-msg="Please write something for us"></textarea>
+
+                                            <div class="validation"></div>
+                                        </p>
+
+
+                                        <button class="site-button radius-no text-uppercase font-weight-600"
+                                            type="submit">Submit</button>
+
+
+
                                     </form>
+                                    {% else %}
+                                    <li>
+                                        <a href="/login">
+                                            <i class="icon-envelope-alt"></i>
+                                            If you want to add comment please login</a>
+                                    </li>{% endif %}
+
+
                                 </div>
+                                <!-- LEAVE A REPLY END -->
                             </div>
                         </div>
                     </div>
-                    <div class="m-b10">
-                        <div class="wt-divider bg-gray-dark"></div>
-                    </div>
-                    <div class="row">
-                        <!-- ABOUT COMPANY -->
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_about">
-                                <!--<h4 class="widget-title">About Company</h4>-->
-                                <div class="logo-footer clearfix p-b15">
-                                    <a href="index.html"><img src="zarzis/images/zarzis_logo.png" alt=""></a>
-                                </div>
-                                <p class="max-w400">MAKE YOUR HOLIDAY BETTER .</p>
+                    <!-- BLOG END -->
 
-                                <ul class="social-icons social-tooltips-outer  wt-social-links">
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-facebook">
-                                            <span class="social-tooltips">Facebook</span>
-                                        </a>
-                                    </li>
-
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-linkedin">
-                                            <span class="social-tooltips">Linkedin</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-google-plus">
-                                            <span class="social-tooltips">Google Plus</span>
-                                        </a>
-                                    </li>
-                                    <li>
-                                        <a href="javascript:void(0);" class="fa fa-instagram">
-                                            <span class="social-tooltips">Instagram</span>
-                                        </a>
-                                    </li>
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_services inline-links">
-                                <h4 class="widget-title">Our location
-                                </h4>
-                                <ul>
-                                    <li><a href="about-1.html">zarzis ...</a></li>
-
-                                </ul>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_services inline-links">
-                                <h4 class="widget-title">Useful links</h4>
-                                <ul>
-                                    <li><a href="about-1.html">About us</a></li>
-                                    <li><a href="post-gallery.html">Reservation</a></li>
-                                    <li><a href="post-gallery.html">Gallery</a></li>
-                                    <li><a href="project-detail.html">Contact</a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_services inline-links">
-                                <h4 class="widget-title"></h4>
-                                <ul>
-                                    <li><a href="about-1.html"></a></li>
-                                    <li><a href="post-gallery.html"></a></li>
-                                    <li><a href="post-gallery.html"></a></li>
-                                    <li><a href="project-detail.html"></a></li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-3 col-md-6 col-sm-6">
-                            <div class="widget widget_address_outer">
-                                <h4 class="widget-title">Contact Us</h4>
-                                <ul class="widget_address">
-                                    <li>
-                                        <i class="sl-icon-map text-primary"></i>
-                                        92 Princess Road, parkvenue,Greater London, NW18JR, United Kingdom</li>
-                                    <li>
-                                        <i class="sl-icon-envolope-letter text-primary"></i>sharandemo@gmail.com</li>
-                                    <li>
-                                        <i class="sl-icon-phone text-primary"></i>(+0091) 912-3456-073</li>
-                                    <li>
-                                        <i class="sl-icon-printer text-primary"></i>(+0091) 912-3456-084</li>
-                                </ul>
-                            </div>
-                        </div>
-
-
-                    </div>
                 </div>
+                <!-- SECTION CONTENT END -->
             </div>
-            <!-- FOOTER COPYRIGHT -->
-            <div class="footer-bottom overlay-wraper">
-                <div class="overlay-main"></div>
-                <div class="container">
+        </div>
+
+        <!-- SECTION CONTENT END -->
+
+    </div>
+    <!-- CONTENT END -->
+    <!-- FOOTER START -->
+    <footer class="site-footer footer-large footer-dark	footer-wide">
+
+        <!-- FOOTER BLOCKES START -->
+        <div class="footer-top overlay-wraper">
+            <div class="overlay-main"></div>
+            <div class="container">
+
+                <div class="news-letter-footer">
                     <div class="row">
-                        <div class="wt-footer-bot-center">
-                            <p style="color: #ffffff">© 2020. Tous droits réservés. ZARZIS HOLIDAYS made with ❤ by
-                                <a style="color: #878787" href="https://www.octaplus-technology.com/">
-                                    Octa+ technology
-                                </a>.</p>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="newsletter-f-left">
+                                <h4 class="text-uppercase m-t0 m-b10">Subscribe to our newsletter!</h4>
+                                <p>Never Miss Anything about us .
+                                </p>
+                            </div>
+                        </div>
+                        <div class="col-md-6 col-sm-6">
+                            <div class="newsletter-f-right text-center">
+                                <form role="search" method="post">
+                                    <div class="input-group">
+                                        <input name="news-letter" class="form-control" placeholder="ENTER YOUR EMAIL"
+                                            type="text">
+                                        <span class="input-group-btn">
+                                            <button type="submit" class="btn-half site-button button-lg">
+                                                <span>Submit</span>
+                                                <em></em>
+                                            </button>
+                                        </span>
+                                    </div>
+                                </form>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </footer>
-        <!-- FOOTER END -->
+                <div class="m-b10">
+                    <div class="wt-divider bg-gray-dark"></div>
+                </div>
+                <div class="row">
+                    <!-- ABOUT COMPANY -->
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget widget_about">
+                            <!--<h4 class="widget-title">About Company</h4>-->
+                            <div class="logo-footer clearfix p-b15">
+                                <a href="index.html"><img src="zarzis/images/zarzis_logo.png" alt=""></a>
+                            </div>
+                            <p class="max-w400">MAKE YOUR HOLIDAY BETTER .</p>
 
-        <!-- BUTTON TOP START -->
-        <button class="scroltop">
-            <span class="fa fa-angle-up  relative" id="btn-vibrate"></span>
-        </button>
+                            <ul class="social-icons social-tooltips-outer  wt-social-links">
+                                <li>
+                                    <a href="javascript:void(0);" class="fa fa-facebook">
+                                        <span class="social-tooltips">Facebook</span>
+                                    </a>
+                                </li>
+
+                                <li>
+                                    <a href="javascript:void(0);" class="fa fa-linkedin">
+                                        <span class="social-tooltips">Linkedin</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="fa fa-google-plus">
+                                        <span class="social-tooltips">Google Plus</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="javascript:void(0);" class="fa fa-instagram">
+                                        <span class="social-tooltips">Instagram</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget widget_services inline-links">
+                            <h4 class="widget-title">Our location
+                            </h4>
+                            <ul>
+                                <li><a href="about-1.html">zarzis ...</a></li>
+
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget widget_services inline-links">
+                            <h4 class="widget-title">Useful links</h4>
+                            <ul>
+                                <li><a href="about-1.html">About us</a></li>
+                                <li><a href="post-gallery.html">Reservation</a></li>
+                                <li><a href="post-gallery.html">Gallery</a></li>
+                                <li><a href="project-detail.html">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget widget_services inline-links">
+                            <h4 class="widget-title"></h4>
+                            <ul>
+                                <li><a href="about-1.html"></a></li>
+                                <li><a href="post-gallery.html"></a></li>
+                                <li><a href="post-gallery.html"></a></li>
+                                <li><a href="project-detail.html"></a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="col-lg-3 col-md-6 col-sm-6">
+                        <div class="widget widget_address_outer">
+                            <h4 class="widget-title">Contact Us</h4>
+                            <ul class="widget_address">
+                                <li>
+                                    <i class="sl-icon-map text-primary"></i>
+                                    92 Princess Road, parkvenue,Greater London, NW18JR, United Kingdom</li>
+                                <li>
+                                    <i class="sl-icon-envolope-letter text-primary"></i>sharandemo@gmail.com</li>
+                                <li>
+                                    <i class="sl-icon-phone text-primary"></i>(+0091) 912-3456-073</li>
+                                <li>
+                                    <i class="sl-icon-printer text-primary"></i>(+0091) 912-3456-084</li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        <!-- FOOTER COPYRIGHT -->
+        <div class="footer-bottom overlay-wraper">
+            <div class="overlay-main"></div>
+            <div class="container">
+                <div class="row">
+                    <div class="wt-footer-bot-center">
+                        <p style="color: #ffffff">© 2020. Tous droits réservés. ZARZIS HOLIDAYS made with ❤ by
+                            <a style="color: #878787" href="https://www.octaplus-technology.com/">
+                                Octa+ technology
+                            </a>.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- FOOTER END -->
+
+    <!-- BUTTON TOP START -->
+    <button class="scroltop">
+        <span class="fa fa-angle-up  relative" id="btn-vibrate"></span>
+    </button>
 
     </div>
 </body>

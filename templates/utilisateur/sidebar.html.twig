@@ -1,6 +1,9 @@
 <!-- start sidebar menu -->
 <div class="sidebar-container">
-	<div class="sidemenu-container navbar-collapse collapse fixed-menu">
+<div class="sidemenu-container navbar-collapse collapse fixed-menu" style="
+		    min-height: 1000px;
+		">
+
 		<div id="remove-scroll">
 			<ul class="sidemenu page-header-fixed p-t-20" data-keep-expanded="false" data-auto-scroll="true" data-slide-speed="200">
 				<li class="sidebar-toggler-wrapper hide">
@@ -14,7 +17,8 @@
 							<div class="sidebar-userpic" style=" margin-top: 50px;">
 
 
-<img class="img-circle "{#  src="{{ asset('uploads/' ~ user.image) }}" #} height="80">
+<img class="img-circle" src="/uploads/{{user.image}}" height="80">
+
 
 
 							</div>

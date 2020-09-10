@@ -1,0 +1,130 @@
+{% extends 'base.html.twig' %}
+{# validation template  : https://bootsnipp.com/snippets/Pb15#}
+{% block body %}
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+		<style>
+/*.container{*/
+/*   margin: 100px;*/
+/*   width: 1000px;*/
+/*   height: 500px;*/
+/*}*/
+/*   .container {*/
+/*      margin: auto;*/
+/*      width: 60%;*/
+/*      padding: 10px;*/
+/*   }*/
+
+.logo {
+	width: 400px;
+	height: 200px;
+	padding: 0;
+}
+
+table tr td {
+	/*border: solid 1px black;*/
+	background-color: black !important;
+}
+
+body {
+	margin-top: 150px;
+}
+
+.color {
+	background-color: #C19B76;
+}
+label {
+	font-size: 1.5em;
+	font-weight: bold;
+	color: #C19B76;
+}
+a {
+	color: white !important;
+	padding: 20px;
+	font-size: small;
+	font-weight: bold;
+
+}
+
+a:hover {
+	color: #C19B76 !important;
+	padding: 20px;
+	font-size: medium;
+	font-weight: bold;
+}
+p {
+	margin-top: 10px !important;
+}
+
+.tb {
+	font-size: xx-large;
+	background-color: #C19B76 !important;
+	color: black;
+	padding: 20px;
+}
+/*.shadow {*/
+/*   text-shadow: 3px 3px 5px #5f2a07;*/
+/*}*/
+/**********************************************/
+
+/*.shadow {*/
+/*   text-shadow: 1px 1px 0 #5f2a07,*/
+/*   2px 2px 0 #5f2a07;*/
+/*}*/
+/**********************************************/
+
+.shadow {
+	color: white;
+	font: bold x-large Helvetica, Arial, Sans-Serif;
+	text-shadow: 1px 1px #5f2a07, 2px 2px #5f2a07, 3px 3px #5f2a07;
+}
+.shadow:hover {
+	position: relative;
+	top: -3px;
+	left: -3px;
+	text-shadow: 1px 1px #5f2a07, 2px 2px #5f2a07, 3px 3px #5f2a07, 4px 4px #5f2a07, 5px 5px #5f2a07, 6px 6px #5f2a07;
+}
+
+.example2 {
+	border: 1px solid;
+	padding: 10px;
+	box-shadow: 5px 10px 20px #e2ccbd inset;
+}
+	</style>
+
+
+		<div class="container-fluid"> <table>
+			<tr>
+				<td colspan="2">
+					<div class="tb example2">
+						<img class="shadow" src="{{ welcome }}" style="margin-top: -40px" alt="">
+						<span class="shadow">Zarzis Holiday thank you for your trust in our services</span>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td class="color">
+					<div>
+						<img class="logo" src="{{ logo }}" alt="">
+					</div>
+				</td>
+
+				<td style="text-align: center" class="color">
+					<div style="margin: 36px;">
+						<label style=" color: #e2ccbd">Your reservation has been successfully registered!</label>
+					</div>
+					<div>
+						<p style="background-color: #AA3333;border-radius: 6px;padding: 5px;">
+							<a href="{{ path('home') }}" style="font-size: 20px">
+								<img style="width: 30px;height: 30px;margin-right: 20px" src="{{ show }}">ZarzisHoliday</a>
+						</p>
+					</div>
+				</td>
+			</tr>
+			<tr>
+				<td colspan="2">
+					<div style="padding: 20px"></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+</div>{% endblock %}

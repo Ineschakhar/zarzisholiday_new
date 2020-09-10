@@ -27,7 +27,7 @@
                         <ol class="breadcrumb page-breadcrumb pull-right">
                             <li>
                                 <i class="fa fa-home"></i>&nbsp;<a class="parent-item"
-                                    href="index.html">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
+                                    href="#">Dashboard</a>&nbsp;<i class="fa fa-angle-right"></i>
                             </li>
                             <li>
                                 <a class="parent-item" href="">Booking</a>&nbsp;<i class="fa fa-angle-right"></i>
@@ -124,6 +124,10 @@
                                         <th class="center">
                                             Code
                                         </th>
+<th class="center">
+	payment
+</th>
+
                                         <th class="center">
                                             Nbr adulte
                                         </th>
@@ -190,6 +194,11 @@
 
                                                 <td class="center">
 {{ reservation.code }}
+
+</td>
+<td class="center">
+<img src="{{asset('zarzis/images/paid.jpg') }}" height="40" title="Rooms">
+
 
 </td>
 

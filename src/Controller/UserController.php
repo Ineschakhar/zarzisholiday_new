@@ -13,7 +13,8 @@ use Symfony\Component\Mime\Email;
 use Symfony\Component\Mailer\Mailer; 
 use App\Repository\CommentRepository; 
 use App\Repository\AppartementRepository;
-use App\Repository\ReservationRepository; 
+use App\Repository\ReservationRepository;
+use Swift_Mailer;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Mailer\MailerInterface;
 use Symfony\Component\HttpFoundation\Response;
@@ -40,11 +41,10 @@ class UserController extends AbstractController
     /**
      * @Route("/test/{id}", name="user_test", methods={"GET"})
      */ 
-    public function test(User $user, Reservation $reservation): Response
+    public function test(User $user): Response
     {
         return $this->render('user/test.html.twig', [
-        'user' => $user,    
-        'reservation' => $reservation,
+        'user' => $user,     
   ]);
     } 
     /**
@@ -107,7 +107,7 @@ class UserController extends AbstractController
      * @param AppartementRepository $appartementRepository
      * @return Response
      */
-    public function newreservation(Session $session, Request $request, $rid, AppartementRepository $appartementRepository/* , \Swift_mailer $mailer */): Response
+    public function newreservation(Swift_Mailer $mailer,Session $session, Request $request, $rid, AppartementRepository $appartementRepository/* , \Swift_mailer $mailer */): Response
     {
         $appartement = $appartementRepository->findOneBy(['id' => $rid]);
 
@@ -130,8 +130,11 @@ class UserController extends AbstractController
         $form->handleRequest($request);
 
 
-        $submittedToken = $request->request->get('token');
-        if ($form->isSubmitted() &&  $form->isValid()) {
+          
+        $submittedToken =
+        $request->request->get('token');
+        if ($form->isSubmitted()) {
+           
             if ($this->isCsrfTokenValid('form-reservation', $submittedToken)) {
                 $entityManager = $this->getDoctrine()->getManager();
 
@@ -154,44 +157,29 @@ class UserController extends AbstractController
                 $entityManager->persist($reservation);
                 $entityManager->flush();
 
-
-                /*Swift mailer*/
-                /*    $message = (new \Swift_Message('Hello Email'))
-        ->setFrom('ineschakhar@gmail.com')
-        ->setTo('ineschakhar@gmail.com')
-        ->setBody(
-            $this->renderView( 'Your reservation has been successfully registered !')
-        )
-    ;
-    $mailer->send($message);
-    $this->addFlash('success', ' A vérification message was sent to your email');
-  */
-                /*Swift mailer */
-
-                /*           //********** SEND EMAIL ***********************>>>>>>>>>>>>>>>
-                $email = (new Email())
-                    ->from($user->getEmail())
-                    ->to($form['email']->getData())
-                    //->cc('cc@example.com')
-                    //->bcc('bcc@example.com')
-                    //->replyTo('fabien@example.com')
-                    //->priority(Email::PRIORITY_HIGH)
-                    ->subject('reservation notification')
-                    //->text('Simple Text')
-                    ->html("Dear " . $form['name']->getData() . "<br>
-                                 <p>We will evaluate your requests and contact you as soon as possible</p> 
-                                 Thank You for your reservation <br> 
-                                 =====================================================
-                                 <br>" . $user->getNom() . "  <br>
-                                 Address : " . $user->getAddress() . "<br>
-                                 Phone   : " . $user->getPhone() . "<br>");
-
-                /* $transport = new GmailTransport($user->getEmail(), $user->getPassword());
-                $mailer = new Mailer($transport);
-                $mailer->send($email); */
-
                 //<<<<<<<<<<<<<<<<********** SEND EMAIL ***********************
-                return $this->redirectToRoute('reservation_index');
+
+                $message = (new \Swift_Message())
+                    ->setContentType('text/html')
+                    ->setSubject('Zarzis Holidays Réservation')
+                    ->setFrom("ineschakhar@gmail.com")
+                    ->setTo("ineschakhar@gmail.com")
+                    ->setContentType("text/html");
+                /*1*/
+                //$img = $message->embed(\Swift_Image::fromPath('../public/zarzis/images/zarzis_logo.png'));
+                $welcome = $message->embed(\Swift_Image::fromPath('../public/zarzis/images/welcome.png'));
+                $logo = $message->embed(\Swift_Image::fromPath('../public/zarzis/images/zarzis_logo.png'));
+                $show = $message->embed(\Swift_Image::fromPath('../public/zarzis/images/show.png'));
+                /*2*/
+                $message->setBody($this->renderView('notification/send.html.twig', [
+                    'welcome' => $welcome,
+                    'logo' => $logo,
+                    'show' => $show,
+                ]));
+
+                $mailer->send($message);
+                //<<<<<<<<<<<<<<<<********** SEND EMAIL ***********************
+                return $this->redirectToRoute('charger');
             }
         }
 
@@ -201,6 +189,7 @@ class UserController extends AbstractController
             'appartement' => $appartement,
             'data' => $data,
             'form' => $form->createView(),
+            
         ]);
     }
 

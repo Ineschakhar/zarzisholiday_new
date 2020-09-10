@@ -38,24 +38,15 @@
 										<div class="profile-usertitle">
 <div class="profile-usertitle-name">	{{user.prenom}}</div>
 
-											<div class="profile-usertitle-job"> Jr. Professor </div>
+											<div class="profile-usertitle-job"> Avocate </div>
 										</div>
-										<ul class="list-group list-group-unbordered">
-											<li class="list-group-item">
-												<b>Followers</b> <a class="pull-right">1,200</a>
-											</li>
-											<li class="list-group-item">
-												<b>Following</b> <a class="pull-right">750</a>
-											</li>
-											<li class="list-group-item">
-												<b>Friends</b> <a class="pull-right">11,172</a>
-											</li>
+										<ul class="list-group list-group-unbordered"> 
 										</ul>
 										<!-- END SIDEBAR USER TITLE -->
 										<!-- SIDEBAR BUTTONS -->
 										<div class="profile-userbuttons">
 											<button type="button"
-												class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-primary">Follow</button>
+												class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-primary">Settings </button>
 											<button type="button"
 												class="mdl-button mdl-js-button mdl-button--raised mdl-js-ripple-effect m-b-10 btn-circle btn-pink">Message</button>
 										</div>
@@ -192,12 +183,14 @@
 													<div class="row">
 														<div class="col-md-3 col-6 b-r"> <strong>Full Name</strong>
 															<br>
-<p class="text-muted">{{user.username}}</p>
+<p class="text-muted">{{user.nom}}
+	{{user.prenom}}</p>
+
 
 														</div>
 														<div class="col-md-3 col-6 b-r"> <strong>Mobile</strong>
 															<br>
-															<p class="text-muted">{{user.Number}}</p>
+															<p class="text-muted">{# {{user.Number}} #}   99 024 797</p>
 														</div>
 														<div class="col-md-3 col-6 b-r"> <strong>Email</strong>
 															<br>
@@ -205,7 +198,7 @@
 														</div>
 														<div class="col-md-3 col-6"> <strong>Location</strong>
 															<br>
-															<p class="text-muted">India</p>
+															<p class="text-muted">Tunisia</p>
 														</div>
 													</div>
 													<hr>

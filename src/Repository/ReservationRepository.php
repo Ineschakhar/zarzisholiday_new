@@ -58,6 +58,7 @@ class ReservationRepository extends ServiceEntityRepository
             WHERE r.userid = :userid
             ORDER BY r.id DESC
         ';
+        dd($id);
         $stmt = $conn->prepare($sql);
         $stmt->execute(['userid' => $id]);
 

@@ -17,10 +17,11 @@ class AdminController extends AbstractController
         $reservations = $this->getDoctrine()
             ->getRepository(Reservation::class)
             ->findAll(); 
-        return $this->render('admin/index.html.twig', [
+       //dd($reservations);
+            return $this->render('admin/index.html.twig', [
             'reservations' => $reservations,     
         ]);
     }
- 
+
 
 }

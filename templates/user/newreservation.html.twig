@@ -7,113 +7,159 @@
 
 {% block body %}
 	<!-- Subintro
-	================================================== -->
-	<section id="subintro">
+			================================================== -->
+<section id="subintro" style="background:#f2d5b8">
+
+
 		<div class="container">
+			<div class="py-5 text-center">
+
+				<h2>Reservation form</h2>
+ 			</div>
+
 			<div class="row">
-				  
-			</div>
-		</div>
-	</section>
-	<section id="maincontent">
-		<div class="container">
-			<div class="row"> 
-				<div
-					class="span8">
-					<!-- start article 1 -->
-					<article class="blog-post">
-						<div class="post-heading"></div>
-						<div class="row">
-							<div class="span8">
-								<h3>Reservation Form
-								</h3>
+				<div class="col-md-4 order-md-2 mb-4">
+					<h4 class="d-flex justify-content-between align-items-center mb-3">
+<span class="text-muted">helpful details</span>
+						<span class="badge badge-secondary badge-pill">6</span>
+					</h4>
+					<ul class="list-group mb-3">
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+<h6 class="my-0">Appartement
+</h6>
 
-								<table class="table">
-								 
-									<tr>
-										<th>appartement :</th>
-<td>{{appartement.title}}</td>
+<h5 class="text-muted">{{appartement.title}}</h5>
+ 
+  
+							</div>
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+<h6 class="my-0">Price :</h6>
 
-									</tr>
-									<tr>
-										<th>Price :</th>
-<td>{{ appartement.price }}</td>
+<h5 class="text-muted">{{ appartement.price }} $</h5>
 
-									</tr>
-									<tr>
-										<th>Checkin Date :</th>
-										<td>{{ data.checkin |date("m/d/Y")}}</td>
-									</tr>
-									<tr>
-										<th>Check Out Date :</th>
-										<td>{{ data.checkout|date("m/d/Y") }}</td>
-									</tr>
-									<tr>
-										<th>Nights :</th>
-										<td>{{ data.days }}</td>
-									</tr>
-									<tr>
-										<th>Total Price :</th>
-										<td>$
-											{{ data.total }}
-										</td>
-									</tr>
-								</table>
+							</div> 
+						</li>
+						<li class="list-group-item d-flex justify-content-between lh-condensed">
+							<div>
+<h6 class="my-0">Checkin Date :</h6>
 
+<h5 class="text-muted">{{ data.checkin |date("m/d/Y")}}</h5>
 
-								{{ include('messages.html.twig') }}
-
-
-								<form name="reservation" method="post" role="form">
-									<div class="row">
-
-
-										<div class="span4 form-group">
-											<input type="text" id="reservation_name" name="reservation[name]" class="input-block-level" value="{{ app.user.nom }}" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
-											<div class="validation"></div>
-										</div>
-										<div class="span4 form-group">
-											<input type="text" id="reservation_surname" name="reservation[surname]" class="input-block-level" value="{{ app.user.prenom }}" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
-											<div class="validation"></div>
-										</div>
-
-										<div class="span4 form-group">
-											<input type="email" class="input-block-level" id="reservation_email" name="reservation[email]" value="{{ app.user.email }}" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
-											<div class="validation"></div>
-										</div>
-										<div class="span4 form-group">
-											<input type="text" class="input-block-level" id="reservation_phone" name="reservation[phone]" maxlength="75" placeholder="Phone Number" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"/>
-											<div class="validation"></div>
-										</div>
-										<div class="span4 form-group">
-											<textarea class="input-block-level" id="reservation_message" name="reservation[message]" maxlength="255" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
-											<div class="validation"></div>
-											<div class="text-center">
-												<input type="hidden" id="checkin" name="checkin" value="{{ data.checkin|date("m/d/Y") }}">
-												<input type="hidden" id="days" name="days" value="{{ data.days }}">
-												<label for="info" style="padding: 10px;margin-top:100px;background-color: #3498db;color: #e0f2f1">
-													***********   CREDIT CARD INFORMATION   **********
-												</label><br>
-												<input type="hidden" name="token" value="{{ csrf_token('form-reservation') }}"/>
-												<a href="{{ path('charger') }}" class="btn btn-primary" type="submit">Send a Resrvation</a>
-
-												{#												******* CREDIT CARD INFORMATION**********#}
-{#												<input type="hidden" name="token" value="{{ csrf_token('form-reservation') }}"/>#}
-{#												<button class="btn btn-theme" type="submit">Send a Resrvation</button>#}
-											</div>
-										</div>
-									</div>
-								</form>
 
 							</div>
+ 						</li>
+						<li class="list-group-item d-flex justify-content-between bg-light">
+							<div class="text-success">
+<h6 class="my-0">Check Out Date :
+	</h6>
+
+<h5>
+
+{{ data.checkout|date("m/d/Y") }}</h5>
+
+
+							</div>
+ 						</li>
+<li class="list-group-item d-flex justify-content-between bg-light">
+	<div class="text-success">
+		<h6 class="my-0">Nights :
+		</h6>
+
+		<h5>
+{{ data.days }}</h5>
+
+
+
+	</div>
+</li>
+<li class="list-group-item d-flex justify-content-between bg-light">
+	<div class="text-success">
+<h6 class="my-0">
+	Total Price :
+
+		</h6>
+
+		<h5>
+
+$
+{{ data.total }}</h5>
+
+
+
+	</div>
+</li>
+ 
+					</ul>
+ 
+				</div>
+				<div class="col-md-8 order-md-1">
+					<h4 class="mb-3"> </h4>
+					<form name="reservation" method="post" role="form">
+						<div class="row">
+							<div class="col-md-6 mb-3">
+								<label for="zip">Your Name</label>
+
+								<input type="text" class="form-control mt-2 mb-2" id="reservation_name" name="reservation[name]" value="{{ app.user.nom }}" placeholder="" data-rule="minlen:4" data-msg="Please enter at least 4 chars" required>
+							</div>
+
+
+							<div class="col-md-6 mb-3">
+								<label for="zip">Your Surname</label>
+
+								<input class="form-control mt-2 mb-2" type="text" id="reservation_surname" name="reservation[surname]" class="input-block-level" value="{{ app.user.prenom }}" placeholder="Your Name" data-rule="minlen:4" data-msg="Please enter at least 4 chars"/>
+								<div class="validation"></div>
+							</div>
+
+							<div class="col-md-6 mb-3">
+								<label for="zip">Your email</label>
+
+								<input class="form-control mt-2 mb-2" type="email" class="input-block-level" id="reservation_email" name="reservation[email]" value="{{ app.user.email }}" placeholder="Your Email" data-rule="email" data-msg="Please enter a valid email"/>
+								<div class="validation"></div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="zip">Your phone</label>
+
+								<input class="form-control mt-2 mb-2" type="text" class="input-block-level" id="reservation_phone" name="reservation[phone]" maxlength="75" placeholder="Phone Number" data-rule="minlen:4" data-msg="Please enter at least 8 chars of subject"/>
+								<div class="validation"></div>
+							</div>
+							<div class="col-md-6 mb-3">
+								<label for="zip">Your Name</label>
+
+<textarea class="input-block-level form-control mt-2 mb-2" id="reservation_message" name="reservation[message]" maxlength="255" rows="5" data-rule="required" data-msg="Please write something for us" placeholder="Message"></textarea>
+
+								<div class="validation"></div>
+								<div class="text-center">
+									<input class="form-control mt-2 mb-2" type="hidden" id="checkin" name="checkin" value="{{ data.checkin|date("m/d/Y") }}">
+									<input class="form-control mt-2 mb-2" type="hidden" id="days" name="days" value="{{ data.days }}">
+<label for="info" style="padding: 10px;margin-top:50px;background-color: #FFF;color: #5433FF">
+
+
+									STRIPE PAYMENT METHOD
+									</label><br>
+									<input class="form-control mt-2 mb-2" type="hidden" name="token" value="{{ csrf_token('form-reservation') }}"/>
+<button href="{{ path('charger') }}" class="btn btn-primary" style="border:none;background-color:#262423;" type="submit">Send a Reservation</button>
+
+
+
+
+									{#												******* CREDIT CARD INFORMATION**********#}
+								{#												<input type="hidden" name="token" value="{{ csrf_token('form-reservation') }}"/>#}
+									{#												<button class="btn btn-theme" type="submit">Send a Resrvation</button>#}
+								</div>
+							</div>
 						</div>
-					</article>
-					<!-- end article 1 -->
+					</form>
+
 
 				</div>
 			</div>
+ 
 		</div>
+
 	</section>
 
-{% endblock %}
 
+{% endblock %}

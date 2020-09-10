@@ -22,7 +22,7 @@
     }
 </style>
 
-<div class="container-fluid center-block" style="margin-top: 200px">
+<div class="container-fluid center-block" style="margin-top: 100px">
 
     <div class="row">
         <div class="col-xs-4"></div>
@@ -38,7 +38,7 @@
                         <div class="container">
                             <div id="errors"></div>
                             <p></p>
-                            <div class="input-group" style="width: 480px;height: 40px">
+                            <div class="input-group" style="width: 310px;height: 40px">
                                 <input type="text" id="cardholder-name" class="form-control"
                                     placeholder="Titulaire de la carte" required autofocus style="height: 40px">
                                 <span class="input-group-addon">
@@ -46,7 +46,7 @@
                                 </span>
                             </div>
                             <br>
-                            <div class="input-group" style="width: 480px;">
+                            <div class="input-group" style="width: 310px;">
                                 <div id="card-elements" class="form-control" style="height: 40px"></div>
                                 <span class="input-group-addon">
                                     <span class="glyphicon glyphicon-lock"></span>
@@ -61,7 +61,7 @@
             </div>
             <ul class="nav nav-pills nav-stacked">
                 <li class="active">
-                    <div class="btn btn-primary btn-lg btn-block" disabled>
+                    <div class="btn btn-primary btn-lg btn-block"  disabled>
                         <span style="float: right;margin-right: 20px;">
                             <span class="glyphicon glyphicon-eur" style="font-size: small"></span>
                             {{ prix }}</span>
@@ -71,7 +71,10 @@
             </ul>
             <br />
             <button id="card-button" type="button" data-secret="{{ client_secret }}"
-                class="btn btn-success btn-lg btn-block">Procéder au paiement</button>
+                class="btn btn-success btn-lg btn-block"style="border: none;
+background-color:#262423;" 
+ style="border: none;
+background-color:#c19b76;" >Procéder au paiement</button>
         </div>
         <div class="col-xs-4"></div>
     </div>

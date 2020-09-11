@@ -2,15 +2,29 @@
 
 namespace App\Controller;
 
+use Stripe\Stripe;
+use Knp\Snappy\Pdf;
+use Stripe\PaymentIntent;
 use Stripe\Exception\ApiErrorException;
-use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\HttpFoundation\Response;
-use Symfony\Component\HttpFoundation\Session\Session;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Session\Session;
+use Knp\Bundle\SnappyBundle\Snappy\Response\PdfResponse;
+use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 
 class PaymentController extends AbstractController
 {
+    /**
+     * @var Pdf
+     */
+    private $snappy;
+
+    public function __construct(Pdf $snappy)
+    {
+        $this->snappy = $snappy;
+    }
+
     /**
      * @Route("/payment", name="payment")
      * @return Response
@@ -39,11 +53,10 @@ class PaymentController extends AbstractController
         $prix = (int) ($session['total']);
 
         if ($request->isMethod('get')) {
-            \Stripe\Stripe::setApiKey('sk_test_51HNMhJD3fCN89TSWvZmH7zaacNb9zAVOW7JlFgSCZppeZKXm70Gc5by1snyXvPo4ZZnGT9bvyx3qdjhvit0XzORt00Cb69kJwE');
-
-            //\Stripe\Stripe::setApiKey('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');
+ 
+            \Stripe\Stripe::setApiKey('sk_test_51HOsV9JGU5M4MA7GtzELFfl5Z0nHjZk9h6NkZpWJqB0rfDmlJAf1RFan5jrulzRDShgwedLK6FGq2TVDYBi4dRQk00gcD9ogRS');
             $charge = \Stripe\PaymentIntent::create([
-                'amount' => $prix,
+                'amount' => $prix*100,
                 'currency' => 'eur',
                 'description' => 'Example charge',
             ]);
@@ -62,13 +75,39 @@ class PaymentController extends AbstractController
      * @param Request $request
      * @return Response
      */
-    public function validation(Request $request): Response
+    public function validation(): Response
     {
-        //        if ($request->isMethod('post')) {
-        //            dd('here');
-        //        }
-        return $this->render('payment/validation.html.twig', [
-            'controller_name' => 'PaymentController',
-        ]);
+
+        // $html =  $this->renderView('payment/validation.html.twig');
+
+               return $this->render('payment/validation.html.twig', [
+                   'controller_name' => 'PaymentController',
+              ]);
     }
-}
+
+    /**
+     * @Route("/download",name="download")
+     */
+     public function downloadPdf()
+    {
+ 
+        $html =  $this->renderView('payment/validation.html.twig');
+
+        // convert la template twig au format  de pfd view
+
+        // return new Response($this->snappy->getOutputFromHtml($html), 200, [
+        //     'Content-Type' => 'application/pdf',
+        //     'Content-Disposition' => 'inline; filename="Facture.pdf"'
+        // ]);
+
+
+        // genere la téléchargement de pdf file
+       return new PdfResponse(
+            $this->snappy->getOutputFromHtml($html), 'Facture.pdf'
+        );
+
+    }
+    
+    
+    
+    }

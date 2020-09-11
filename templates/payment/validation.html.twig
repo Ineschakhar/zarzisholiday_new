@@ -1,105 +1,110 @@
-{% extends 'base.html.twig' %}
-{# validation template  : https://bootsnipp.com/snippets/Pb15#}
-{% block body %}
-	<div style="background-color: #C19B76;color: #e0f2f1;font-size: xx-large;text-align: center"> payement Succeed
-	</div> 
-
-	<p></p>
-
-	{#<link href="//netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">#}
-	{#<script src="//netdna.bootstrapcdn.com/bootstrap/3.0.0/js/bootstrap.min.js"></script>#}
-	{#<script src="//code.jquery.com/jquery-1.11.1.min.js"></script>#}
-
+<html>
+	<body>
 		<style>
-body {
-	margin-top: 20px;
-}
-	</style>
-	<!------ Include the above in your HEAD tag ---------->
+			body {
+				margin-top: 20px;
+			}
+			.container {
+				background-color: #F5F5F5;
+			}
+			.center {
+				margin: auto;
+				width: 50%;
+				height: 500px;
+				border: 3px solid black;
+				padding: 10px;
+			}
+			.download {
+				margin: auto;
+				width: 15%;
+				padding: 10px;
+			}
 
-	{%  set date= (app.session.get('data')['checkout']) |date('l  d/m/Y') %}
-	{%  set nbrJour= (app.session.get('data')['days']) %}
-	{%  set prix= (app.session.get('data')['price']) %}
-	{%  set total= (app.session.get('data')['total']) %} 
+			table,
+			td,
+			th {
+				/*border: 1px solid #ddd;*/
+				text-align: center;
+			}
+			th {
+				background-color: #C19B76;
+				color: white;
+			}
+			table {
+				border-collapse: collapse;
+				width: 100%;
+			}
+			th,
+			td {
+				padding: 15px;
+			}
+		</style>
+		{% set date= (app.session.get('data')['checkout']) |date('l  d/m/Y') %}
+		{% set nbrJour= (app.session.get('data')['days']) %}
+		{% set prix= (app.session.get('data')['price']) %}
+		{% set total= (app.session.get('data')['total']) %}
 
-		<div class="container">  
-		<div class="row">
-<div class="text-center">
-	<button class="site-button-secondry btn-half " style="margin-bottom:20px;color: #fff;">
+		<div style="background-color: #C19B76;color: #e0f2f1;padding: 2px;text-align: center">
+			<h1>payement Succeed</h1>
+		</div>
+		<p></p>
+		<div class="download">
+			<a href="{{ path('download')}}">
+				<button style="background-color: black;color: #fff;padding: 5px;font-weight: bold;font-size: large">
 
-		Export as PDF</button>
-</div>
+					Export as PDF</button>
+			</a>
+		</div>
 
-			<div class="well col-xs-10 col-sm-10 col-md-6 col-xs-offset-1 col-sm-offset-1 col-md-offset-3">
-				<div class="row">
-				
-					<div class="col-xs-6 col-sm-6 col-md-6">
-						<address>
-							<strong>Zarzis Holidays</strong>
-							<br>Rue djerba 
-							<br title="Phone">Phone:</br>
+		<div class="container center">
+			<pre>
+<span style="float: left">
+Zarzis Holidays
+Rue djerba
+Phone:
++216 99 024 797
+</span>
+<span style="float: right;margin-top: -16px">
+Date: Thursday 24/09/2020
 
-							+216 99 024 797					
-								</address>
-					</div>
-					<div class="col-xs-6 col-sm-6 col-md-6 text-right">
-						<p>
-							<em>
-								Date:
-								{{ date }}
+     Receipt #: 34522677W
+</span>
+</pre>
+			<div style="text-align: center;font-size: xx-large;font-weight: bold;margin-top: 100px;">
+				<h2>Invoice</h2>
+			</div>
 
-							</em>
-						</p>
-						<p>
-							<em>Receipt #: 34522677W</em>
-						</p>
-					</div>
-				</div>
-				<div class="row">
-					<div class="text-center">
-						<h1>Invoice</h1>
-					</div>
+			<table>
+				<tr>
+					<th>Product</th>
+					<th>Nombre de jours
+					</th>
+					<th>Price</th>
+					<th>Total</th>
+				</tr>
+				<tr>
+					<td>Zarzis Holidays Appartment</td>
+					<td>
+						{{ nbrJour }}</td>
+					<td>{{ prix }}</td>
+					<td>{{ total }}</td>
+				</tr>
+				<tr>
+					<td style="padding: 30px!important;font-weight: bold;text-align: left">
+						<h1>
+							<strong>
+								Total :
+								<span style="margin-right: 10px">
+									€{{ total }}
+								</span>
+							</strong>
+						</h1>
+					</td>
+				</tr>
 
+			</table>
 
-
-				</span>
-				<table class="table table-hover">
-					<thead>
-						<tr>
-							<th>Product</th>
-							<th>Nombre de jours</th>
-							<th class="text-center">Price</th>
-							<th class="text-center">Total</th>
-						</tr>
-					</thead>
-<td class="col-md-3" style="text-align: center">
-Zarzis Holidays Appartment
-</td>
-
-				</h4>
-			</td>
-			<td class="col-md-3" style="text-align: center">
-				{{ nbrJour }}
-			</td>
-			<td class="col-md-2 text-center">{{ prix }}</td>
-			<td class="col-md-2 text-center">{{ total }}</td>
-		</tr> 
-		<tr> 
-			<td class="text-center">
-				<h4>
-					<strong>Total:
-					</strong>
-				</h4>
-			</td>
-			<td class="text-left text-danger ">
-				<h4>
-					<strong>€{{ total }}</strong>
-				</h4>
-
-			</td> 
- </tr>
-
-	</tbody>
-</table></td></div></div></div>{% endblock %}
-
+		</div>
+	</body>
+</html>
 

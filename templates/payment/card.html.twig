@@ -87,9 +87,7 @@ background-color:#c19b76;" >Procéder au paiement</button>
 
 <script>
     window.onload = () => { // Variables
-        let stripe = Stripe(
-        'pk_test_51HNMhJD3fCN89TSWQ5p1et1fQBQrzQuDwQ1IHyfItcRKjDudG08pMMTxOrM8WHQCjZOQUMpxZq8TcWWxYR1i2u5200uUAwHKpt'
-            //'pk_live_51HOin5ERvADcD32u4hKnaxWGlcH4hFqpwKDMJ9EyI0mjyhhZ4an4yf8raD6WM1iAdSTlWPAFEzkSH6dmcJCmSWET00L8eVQYoe'
+        let stripe = Stripe('pk_test_51HOsV9JGU5M4MA7GvhnWHmTVytu9KcpSRNWYMyAkVYdvQIxhkz1i1G4c9Gx7rUkn1Vw07EhJSFCHEHbA28R6Uk7s00tXXKmvDa'
             )
         let elements = stripe.elements()
         let redirect = "{{ path('validation') }}"

@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\File;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use FOS\CKEditorBundle\Form\Type\CKEditorType;
 
 class AppartementType extends AbstractType
 {
@@ -40,7 +41,12 @@ class AppartementType extends AbstractType
                 ],
             ]) 
             ->add('nbrpersonne')
-            ->add('description')
+            ->add('description', CKEditorType::class, array(
+            'config' => array(
+                'uiColor' => '#ffffff',
+                //...
+            )))
+ 
             ->add('postalCode')
             ->add('status', ChoiceType::class, [
                 'choices' => [
